@@ -3,862 +3,508 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AZLYC — Strategic governance and systems transformation studio</title>
-<meta name="description" content="AZLYC is a strategic governance and systems transformation studio operating at the intersection of institutions, technology and complex environments.">
-<link rel="canonical" href="https://azlyc.com/">
+<title>AZLYC — Operating systems for governance, technology and institutional change</title>
+<meta name="description" content="AZLYC is an international advisory platform that structures, coordinates and operates governance and transformation across regulated, cross-border environments.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   CSS LITERAL del export C · Statement (sin cambios)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.dirC {
-  --bg: #ede8db;
-  --paper: #e3dcc8;
-  --ink: #161410;
-  --ink-2: rgba(22,20,16,0.65);
-  --ink-3: rgba(22,20,16,0.4);
-  --rule: rgba(22,20,16,0.16);
-  --green: #1f3d2b;
-  --green-2: #2e5a3f;
-  --green-soft: #c5d4bf;
-  --orange: #b85c38;
-  font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
-  font-feature-settings: 'ss01', 'kern';
-  color: var(--ink);
-  background: var(--bg);
-  font-size: 15px;
-  line-height: 1.55;
-  letter-spacing: -0.005em;
-}
-.dirC .ser { font-family: 'Instrument Serif', 'Source Serif Pro', Georgia, serif; font-weight: 400; }
-.dirC .ital { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; }
-.dirC .mast {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--ink-2); font-weight: 500;
-}
-.dirC .mast--green { color: var(--green); }
-.dirC h1, .dirC h2, .dirC h3 { margin: 0; letter-spacing: -0.025em; font-weight: 400; }
-.dirC a { color: inherit; text-decoration: none; }
-.dirC .btn {
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 16px 28px; font-family: 'DM Sans', sans-serif;
-  font-size: 14px; font-weight: 500; letter-spacing: 0.02em;
-  background: var(--ink); color: var(--bg); border: 1px solid var(--ink);
-  border-radius: 999px; cursor: pointer; transition: all .25s;
-}
-.dirC .btn:hover { background: var(--green); border-color: var(--green); transform: translateY(-1px); }
-.dirC .btn--ghost { background: transparent; color: var(--ink); }
-.dirC .btn--ghost:hover { background: var(--ink); color: var(--bg); }
-.dirC .btn--green { background: var(--green); border-color: var(--green); }
-.dirC .placeholder-warm { background-image: repeating-linear-gradient(135deg, rgba(22,20,16,0.07) 0 1px, transparent 1px 14px), linear-gradient(180deg, #c9b78d, #a39067); }
-.dirC .placeholder-cool { background-image: repeating-linear-gradient(135deg, rgba(22,20,16,0.07) 0 1px, transparent 1px 14px), linear-gradient(180deg, #b9c2ad, #7d8a73); }
-.dirC .lang { display: inline-flex; background: rgba(22,20,16,0.06); padding: 4px; border-radius: 999px; }
-.dirC .lang button { background: transparent; border: 0; padding: 6px 14px; font-family: 'DM Sans'; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; cursor: pointer; color: var(--ink-2); border-radius: 999px; }
-.dirC .lang button.on { background: var(--ink); color: var(--bg); }
-.dirC .tag {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 14px; border: 1px solid var(--rule); border-radius: 999px;
-  font-size: 12px; color: var(--ink-2); background: rgba(255,255,255,0.4);
-}
-.dirC .tag--green { background: var(--green); color: var(--bg); border-color: var(--green); }
-.dirC .marquee-band { background: var(--green); color: var(--bg); padding: 22px 0; overflow: hidden; white-space: nowrap; }
-.dirC .marquee-track { display: inline-flex; gap: 80px; align-items: center; animation: dirC-marquee 40s linear infinite; }
-@keyframes dirC-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.dirC .marquee-item { display: inline-flex; gap: 24px; align-items: center; font-family: 'Instrument Serif'; font-size: 48px; letter-spacing: -0.02em; font-weight: 400; }
-.dirC .marquee-item .star { display:inline-block; width: 18px; height: 18px; transform: rotate(45deg); background: var(--green-soft); }
-.dirC .service-block { padding: 48px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background .3s; position: relative; }
-.dirC .service-block:hover { background: var(--green); color: var(--bg); }
-.dirC .service-block:hover .mast { color: rgba(237,232,219,0.7) !important; }
-.dirC .service-block:hover .num { color: var(--green-soft); }
-.dirC .service-block .arrow-c { position: absolute; top: 32px; right: 32px; font-family: 'Instrument Serif'; font-size: 36px; line-height: 1; transition: transform .3s; opacity: 0.4; }
-.dirC .service-block:hover .arrow-c { transform: translate(8px, -8px); opacity: 1; color: var(--green-soft); }
-.dirC .num { font-family: 'Instrument Serif'; font-size: 80px; line-height: 1; letter-spacing: -0.04em; color: var(--green); transition: color .3s; }
-.dirC .frame { border: 1px solid var(--rule); background: rgba(255,255,255,0.4); }
-.dirC input, .dirC select, .dirC textarea {
-  width: 100%; background: rgba(255,255,255,0.5); border: 1px solid var(--rule);
-  padding: 14px 16px; font: inherit; font-family: inherit; font-size: 15px;
-  color: var(--ink); outline: none; border-radius: 8px; transition: all .2s;
-}
-.dirC input:focus, .dirC select:focus, .dirC textarea:focus { border-color: var(--green); background: rgba(255,255,255,0.9); }
-.dirC .lbl { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-2); font-weight: 500; margin-bottom: 6px; display: block; }
-.dirC .lift { transition: transform .3s; }
-.dirC .lift:hover { transform: translateY(-4px); }
+  /* ============================================================
+     DESIGN TOKENS
+     ============================================================ */
+  :root {
+    /* color */
+    --bg:           #F5F0E6;   /* cream / crudo */
+    --bg-tint:      #EEE7D8;   /* slightly darker cream for blocks */
+    --ink:          #1A1814;   /* near-black, warm */
+    --ink-soft:     #5A5249;   /* secondary text */
+    --ink-mute:     #8A8073;   /* tertiary / metadata */
+    --rule:         #D9CFBC;   /* hairline */
+    --rule-soft:    #E5DDC9;   /* very faint hairline */
+    --accent:       #D77A3A;   /* AZLYC orange */
+    --accent-deep:  #B5612A;
+    --accent-tint:  rgba(215, 122, 58, 0.08);
+    --paper-shadow: 0 1px 0 rgba(26, 24, 20, 0.04);
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Layout (reset + grid) — minimum scaffolding around the CSS above
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { background: #ede8db; }
-body { font-family: 'DM Sans', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-.dirC ::selection { background: var(--green); color: var(--bg); }
+    /* type */
+    --serif:  "Fraunces", "Times New Roman", serif;
+    --sans:   "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:   "JetBrains Mono", "SF Mono", Consolas, monospace;
 
-.dirC .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+    /* scale (modular, 1.250 / major third) */
+    --t-xs:  0.75rem;   /* 12 */
+    --t-sm:  0.875rem;  /* 14 */
+    --t-base: 1rem;     /* 16 */
+    --t-md:  1.125rem;  /* 18 */
+    --t-lg:  1.375rem;  /* 22 */
+    --t-xl:  1.75rem;   /* 28 */
+    --t-2xl: 2.25rem;   /* 36 */
+    --t-3xl: 3rem;      /* 48 */
+    --t-4xl: 4rem;      /* 64 */
+    --t-5xl: 5.5rem;    /* 88 */
 
-/* Header / nav */
-.dirC > header {
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  padding: 22px clamp(20px, 4vw, 48px);
-  border-bottom: 1px solid var(--rule);
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(237,232,219,0.92); backdrop-filter: blur(14px);
-}
-.dirC > header > div:first-child { font-size: 22px; }
-.dirC > header > nav { display: flex; gap: 28px; }
-.dirC > header > nav a { font-size: 13px; letter-spacing: 0.04em; color: var(--ink-2); }
-.dirC > header > nav a:hover { color: var(--green); }
-.dirC > header > div:last-child { display: flex; align-items: center; gap: 16px; }
-@media (max-width: 920px) { .dirC > header > nav { display: none; } }
+    /* spacing */
+    --gap-1: 0.5rem;
+    --gap-2: 1rem;
+    --gap-3: 1.5rem;
+    --gap-4: 2rem;
+    --gap-5: 3rem;
+    --gap-6: 4rem;
+    --gap-7: 6rem;
+    --gap-8: 8rem;
 
-/* Hero section */
-.dirC > section:first-of-type {
-  padding: clamp(40px, 6vw, 72px) clamp(20px, 4vw, 48px) clamp(60px, 8vw, 100px);
-  border-bottom: 1px solid var(--rule);
-}
-.dirC > section:first-of-type > div:first-child {
-  display: flex; justify-content: space-between; gap: 24px;
-  border-bottom: 1px solid var(--rule); padding-bottom: 18px; margin-bottom: clamp(40px, 6vw, 80px);
-}
-.dirC > section:first-of-type h1 {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(56px, 10vw, 160px); line-height: 0.95; font-weight: 400;
-  letter-spacing: -0.03em;
-  margin-bottom: clamp(40px, 6vw, 80px);
-}
-.dirC > section:first-of-type h1 .ital { color: var(--green); }
-.dirC > section:first-of-type h1 .ital-orange { color: var(--orange); font-family: 'Instrument Serif'; font-style: italic; }
-.dirC > section:first-of-type h1 .placeholder-cool {
-  display: inline-block; width: clamp(120px, 16vw, 220px); height: clamp(50px, 7vw, 90px);
-  vertical-align: middle; margin: 0 12px;
-}
-.dirC > section:first-of-type > div:last-child {
-  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: clamp(24px, 3vw, 48px);
-}
-.dirC > section:first-of-type > div:last-child > div > .mast { display: block; margin-bottom: 16px; }
-.dirC > section:first-of-type > div:last-child p { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin-bottom: 24px; }
-.dirC > section:first-of-type > div:last-child > div:nth-child(1) > div:last-child { display: flex; gap: 12px; flex-wrap: wrap; }
-.dirC > section:first-of-type > div:last-child ol {
-  list-style: none; display: flex; flex-direction: column; gap: 12px;
-}
-.dirC > section:first-of-type > div:last-child ol li { display: flex; gap: 16px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
-.dirC > section:first-of-type > div:last-child ol li > span:last-child { font-size: 15px; color: var(--ink); }
-.dirC > section:first-of-type > div:last-child .frame { padding: 24px; border-radius: 8px; }
-.dirC > section:first-of-type > div:last-child .frame > .mast:first-child { display: block; margin-bottom: 16px; }
-.dirC > section:first-of-type > div:last-child .frame > div { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
-.dirC > section:first-of-type > div:last-child .frame > div:last-child {
-  display: flex; justify-content: space-between; align-items: center; padding-top: 12px;
-  border-top: 1px solid var(--rule); margin-bottom: 0;
-}
-.dirC > section:first-of-type > div:last-child .frame > div:last-child > span:last-child > span:first-child {
-  display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px;
-}
-@media (max-width: 920px) {
-  .dirC > section:first-of-type > div:last-child { grid-template-columns: 1fr; }
-}
+    /* container */
+    --maxw: 1240px;
+    --pad-x: clamp(1.5rem, 4vw, 4rem);
+  }
 
-/* Marquee (estructura especial) */
+  /* ============================================================
+     RESET + BASE
+     ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: var(--t-base);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "cv11";
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  h1, h2, h3, h4, h5, h6, p { margin: 0; }
+  button { font: inherit; cursor: pointer; }
 
-/* Common sections */
-.dirC section {
-  padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 48px);
-  border-bottom: 1px solid var(--rule);
-}
-.dirC section > div:first-child {
-  display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(24px, 4vw, 64px);
-  margin-bottom: clamp(40px, 5vw, 64px); align-items: start;
-}
-.dirC section > div:first-child > div:first-child .mast { display: block; margin-bottom: 16px; }
-.dirC section > div:first-child h2 {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(36px, 5.5vw, 80px); line-height: 1; font-weight: 400;
-}
-.dirC section > div:first-child > div:last-child p {
-  font-size: 17px; line-height: 1.65; color: var(--ink-2);
-}
-.dirC section > div:first-child > div:last-child p + p { margin-top: 14px; }
-@media (max-width: 920px) {
-  .dirC section > div:first-child { grid-template-columns: 1fr; }
-}
+  /* ============================================================
+     LAYOUT PRIMITIVES
+     ============================================================ */
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding-inline: var(--pad-x);
+  }
 
-/* Section sec-0 (mission cards 3) */
-.dirC #sec-0 > div:last-child {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-}
-.dirC #sec-0 > div:last-child .frame {
-  padding: 32px; display: flex; flex-direction: column; gap: 14px; min-height: 280px;
-}
-.dirC #sec-0 > div:last-child .frame > div:first-child { font-size: 48px; line-height: 1; color: var(--green); }
-.dirC #sec-0 > div:last-child .frame h3 { font-size: 24px; line-height: 1.15; }
-.dirC #sec-0 > div:last-child .frame p { font-size: 14px; line-height: 1.55; color: var(--ink-2); flex-grow: 1; }
-@media (max-width: 920px) { .dirC #sec-0 > div:last-child { grid-template-columns: 1fr; } }
+  /* ============================================================
+     HEADER
+     ============================================================ */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .site-header.scrolled {
+    border-bottom-color: var(--rule);
+  }
+  .site-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-4);
+    padding-block: 1.25rem;
+  }
 
-/* Section sec-1 (service-blocks grid) — used for the 7 fields of practice */
-.dirC #sec-1 > div:last-child {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--rule); border-left: 1px solid var(--rule);
-}
-.dirC #sec-1 .service-block { display: flex; flex-direction: column; gap: 16px; min-height: 340px; cursor: pointer; }
-.dirC #sec-1 .service-block h3 { font-size: 22px; line-height: 1.2; margin-top: 8px; }
-.dirC #sec-1 .service-block p { font-size: 14px; line-height: 1.55; color: var(--ink-2); }
-.dirC #sec-1 .service-block:hover p { color: rgba(237,232,219,0.85); }
-@media (max-width: 920px) { .dirC #sec-1 > div:last-child { grid-template-columns: 1fr; } }
-@media (max-width: 1100px) and (min-width: 921px) { .dirC #sec-1 > div:last-child { grid-template-columns: repeat(2, 1fr); } }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+    flex-shrink: 0;
+  }
+  .brand-mono { height: 36px; width: auto; }
+  .brand-word { height: 16px; width: auto; opacity: 0.95; }
 
-/* Section sec-2 (practice + tags + stats) */
-.dirC #sec-2 > div:nth-child(2) {
-  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 4vw, 64px);
-  margin-top: 32px;
-}
-.dirC #sec-2 > div:nth-child(2) > div:first-child { display: flex; flex-direction: column; gap: 20px; }
-.dirC #sec-2 > div:nth-child(2) > div:first-child > div { display: flex; flex-wrap: wrap; gap: 8px; }
-.dirC #sec-2 > div:nth-child(3) {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-  margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule);
-}
-.dirC #sec-2 > div:nth-child(3) > div .ser { font-size: 56px; line-height: 1; color: var(--green); }
-.dirC #sec-2 > div:nth-child(3) > div .mast { display: block; margin-top: 8px; }
-@media (max-width: 920px) {
-  .dirC #sec-2 > div:nth-child(2) { grid-template-columns: 1fr; }
-  .dirC #sec-2 > div:nth-child(3) { grid-template-columns: repeat(2, 1fr); }
-}
+  .nav-primary {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-5);
+    font-family: var(--sans);
+    font-size: var(--t-sm);
+    letter-spacing: 0.005em;
+  }
+  .nav-primary a {
+    color: var(--ink-soft);
+    transition: color 0.2s ease;
+    position: relative;
+  }
+  .nav-primary a:hover { color: var(--ink); }
+  .nav-primary a::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .nav-primary a:hover::after { transform: scaleX(1); }
 
-/* Section sec-2 special heading (no two-col head) */
-.dirC #sec-2 > div:first-child {
-  display: block; grid-template-columns: none; margin-bottom: 0;
-}
-.dirC #sec-2 > div:first-child .mast { display: block; margin-bottom: 16px; }
-.dirC #sec-2 > div:first-child h2 { margin-bottom: 24px; }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.125rem;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    font-size: var(--t-sm);
+    color: var(--ink);
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  .nav-cta:hover {
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .nav-cta .arrow { transition: transform 0.25s ease; }
+  .nav-cta:hover .arrow { transform: translateX(3px); }
 
-/* Section sec-3 (founder) */
-.dirC #sec-3 { padding-top: 0; }
-.dirC #sec-3 > .mast { display: block; padding-top: clamp(60px, 8vw, 100px); margin-bottom: 32px; }
-.dirC #sec-3 > div {
-  display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(32px, 4vw, 64px); align-items: start;
-}
-.dirC #sec-3 > div > div:first-child .placeholder-warm {
-  aspect-ratio: 1; border-radius: 8px; margin-bottom: 20px;
-}
-.dirC #sec-3 > div > div:first-child > div:last-child > .ser { font-size: 32px; }
-.dirC #sec-3 > div > div:first-child > div:last-child > .mast { display: block; margin-top: 4px; }
-.dirC #sec-3 > div > div:last-child blockquote {
-  border-left: 3px solid var(--green); padding-left: 24px; margin-bottom: 24px;
-}
-.dirC #sec-3 > div > div:last-child blockquote p.ser {
-  font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; color: var(--ink); margin-bottom: 12px;
-}
-.dirC #sec-3 > div > div:last-child p { font-size: 16px; line-height: 1.65; color: var(--ink-2); }
-@media (max-width: 920px) { .dirC #sec-3 > div { grid-template-columns: 1fr; } }
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero {
+    padding-top: clamp(4rem, 9vw, 7rem);
+    padding-bottom: clamp(5rem, 10vw, 8rem);
+    position: relative;
+    overflow: hidden;
+  }
 
-/* Section sec-4 (cases) — used for engagements */
-.dirC #sec-4 > div:last-child {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-}
-.dirC #sec-4 > div:last-child article {
-  padding: 32px; display: flex; flex-direction: column; gap: 16px; border-radius: 8px;
-}
-.dirC #sec-4 > div:last-child article > div:nth-child(1) { display: flex; justify-content: space-between; align-items: baseline; }
-.dirC #sec-4 > div:last-child article > div:nth-child(1) > .ser { font-size: 28px; color: var(--green); }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) { flex-grow: 1; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) > .mast { display: block; margin-bottom: 8px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) h3 { font-size: 22px; line-height: 1.2; margin-bottom: 12px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) p { font-size: 14px; line-height: 1.6; color: var(--ink-2); margin-bottom: 14px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) > div:last-child { display: flex; flex-wrap: wrap; gap: 6px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(3) {
-  display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: auto;
-}
-.dirC #sec-4 > div:last-child article > div:nth-child(3) > .placeholder-warm,
-.dirC #sec-4 > div:last-child article > div:nth-child(3) > .placeholder-cool { width: 100px; height: 60px; border-radius: 4px; }
-@media (max-width: 920px) { .dirC #sec-4 > div:last-child { grid-template-columns: 1fr; } }
+  /* subtle decorative grid in the background, fades top-bottom */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--rule-soft) 1px, transparent 1px);
+    background-size: calc(100% / 12) 100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0) 70%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0) 70%);
+    pointer-events: none;
+    opacity: 0.6;
+  }
 
-/* Section sec-6 (contact) */
-.dirC #sec-6 > .mast:first-child { display: block; margin-bottom: 12px; }
-.dirC #sec-6 > h2 { font-size: clamp(36px, 5vw, 64px); margin-bottom: 16px; }
-.dirC #sec-6 > p { font-size: 17px; color: var(--ink-2); margin-bottom: 40px; max-width: 720px; }
-.dirC #sec-6 > div {
-  display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(32px, 5vw, 64px);
-}
-.dirC #sec-6 > div > div:first-child { display: flex; flex-direction: column; gap: 4px; }
-.dirC #sec-6 > div > div:first-child > .mast { display: block; margin-top: 20px; }
-.dirC #sec-6 > div > div:first-child > .ser { font-size: 20px; }
-.dirC #sec-6 form { display: flex; flex-direction: column; gap: 16px; }
-.dirC #sec-6 form > button { align-self: flex-start; margin-top: 8px; }
-@media (max-width: 920px) { .dirC #sec-6 > div { grid-template-columns: 1fr; } }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-6);
+    position: relative;
+    z-index: 1;
+  }
 
-/* Footer */
-.dirC > footer {
-  background: var(--ink); color: var(--bg);
-  padding: 48px clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 32px;
-}
-.dirC > footer > div:first-child { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
-.dirC > footer > div:first-child > .ser { font-size: 32px; color: var(--bg); }
-.dirC > footer > div:first-child .mast > div { color: rgba(237,232,219,0.5); margin-top: 4px; }
-.dirC > footer > div:last-child { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 24px; border-top: 1px solid rgba(237,232,219,0.16); flex-wrap: wrap; }
-.dirC > footer > div:last-child > .mast { color: rgba(237,232,219,0.5); }
-.dirC > footer > div:last-child > div { display: flex; gap: 24px; }
-.dirC > footer > div:last-child > div a { color: rgba(237,232,219,0.7); }
-.dirC > footer > div:last-child > div a:hover { color: var(--bg); }
+  .hero-meta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--gap-3);
+    font-family: var(--mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    padding-bottom: var(--gap-3);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .hero-meta-tags {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+  }
+  .hero-meta-tags .sep {
+    width: 3px; height: 3px; border-radius: 50%;
+    background: var(--ink-mute);
+    display: inline-block;
+  }
+  .hero-meta-tags .accent {
+    color: var(--accent);
+  }
 
-.dirC .logo { display: block; height: 72px; width: auto; }
-.dirC .logo--footer { height: 88px; filter: brightness(0) invert(1); }
-@media (max-width: 920px) { .dirC .logo { height: 56px; } .dirC .logo--footer { height: 72px; } }
+  .hero-index {
+    font-family: var(--mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .hero-index strong {
+    color: var(--accent);
+    font-weight: 500;
+  }
 
+  .hero-title {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(2.5rem, 6.5vw, var(--t-5xl));
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 96, "SOFT" 20;
+    max-width: 18ch;
+  }
+  .hero-title em {
+    font-style: italic;
+    font-weight: 350;
+    color: var(--accent);
+    font-variation-settings: "opsz" 96, "SOFT" 60;
+  }
+
+  .hero-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-6);
+    margin-top: var(--gap-4);
+  }
+  @media (min-width: 880px) {
+    .hero-body {
+      grid-template-columns: 1.4fr 1fr;
+      gap: var(--gap-7);
+      align-items: end;
+    }
+  }
+  .hero-lede {
+    font-family: var(--sans);
+    font-size: var(--t-md);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    font-weight: 350;
+  }
+  .hero-actions {
+    display: flex;
+    gap: var(--gap-2);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.875rem 1.5rem;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 999px;
+    font-size: var(--t-sm);
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+  .btn-primary:hover { background: var(--accent-deep); }
+  .btn-primary .arrow { transition: transform 0.25s ease; }
+  .btn-primary:hover .arrow { transform: translateX(3px); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.25rem;
+    color: var(--ink);
+    font-size: var(--t-sm);
+    border-bottom: 1px solid var(--rule);
+    border-radius: 0;
+    transition: border-color 0.25s ease, color 0.25s ease;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent-deep); }
+
+  /* ============================================================
+     SECTION 02 — PLATFORM (preview)
+     ============================================================ */
+  .section {
+    padding-block: clamp(5rem, 9vw, 8rem);
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-3);
+    margin-bottom: var(--gap-6);
+    max-width: 64rem;
+  }
+  .section-eyebrow {
+    font-family: var(--mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .section-eyebrow strong {
+    color: var(--accent);
+    font-weight: 500;
+    margin-right: 0.5rem;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3.5vw, var(--t-3xl));
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    max-width: 24ch;
+    font-variation-settings: "opsz" 60;
+  }
+  .section-lede {
+    font-family: var(--sans);
+    font-size: var(--t-md);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin-top: var(--gap-2);
+    font-weight: 350;
+  }
+
+  /* ============================================================
+     REVEAL ANIMATIONS — scroll-triggered, fail-open
+     ============================================================ */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+                transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .js-on .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  .js-on .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* staggered reveal for hero — uses CSS only, no JS */
+  .hero .reveal-stack > * {
+    opacity: 0;
+    animation: rise 0.95s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  .hero .reveal-stack > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero .reveal-stack > *:nth-child(2) { animation-delay: 0.18s; }
+  .hero .reveal-stack > *:nth-child(3) { animation-delay: 0.32s; }
+  .hero .reveal-stack > *:nth-child(4) { animation-delay: 0.48s; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ============================================================
+     MOBILE
+     ============================================================ */
+  @media (max-width: 720px) {
+    .nav-primary { display: none; }
+    .hero-meta { grid-template-columns: 1fr; }
+    .hero-meta > :last-child { justify-self: start; }
+  }
 </style>
 </head>
 <body>
 
-<div class="dirC" id="top">
-
-<header>
-  <div><a href="#top"><img src="data:image/jpeg;base64,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" alt="AZLYC" class="logo" /></a></div>
-  <nav>
-    <a href="#sec-0">Approach</a>
-    <a href="#sec-why">Manifesto</a>
-    <a href="#sec-1">Domains</a>
-    <a href="#sec-2">Practice</a>
-    <a href="#sec-6">Contact</a>
-  </nav>
-  <div>
-    <div class="lang"><button class="on" data-lang="en">EN</button><button data-lang="es">ES</button></div>
-    <a href="#sec-6" class="btn">Begin a conversation →</a>
+<header class="site-header" id="header">
+  <div class="wrap site-header-inner">
+    <a href="#top" class="brand" aria-label="AZLYC home">
+      <img class="brand-mono" src="data:image/png;base64,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" alt="">
+      <img class="brand-word" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAAmCAYAAAAGC/8vAAAMFGlDQ1BJQ0MgUHJvZmlsZQAAeJyVVwdUk8kWnr+kEBJaIAJSQu9IkS41VEFAOtgISYBQAiYEFSvIooJrFwtWdFVEwVUpsqiI2FkU7PWBioqyigUbKm9SQNfXzrvnzD8fd+69892bmWEGAGU7dm5uFqoCQLYgTxgV5MdMSExiknoABagCKrADVDZHlOsbGRkGoIz0f5f3NwAi6a/aSGL96/h/FVUuT8QBAImEOIUr4mRDfBQAXJOTK8wDgNAO9Uaz8nIleABidSEkCAARl+A0GdaU4BQZtpbaxESxIPYBgExls4VpAChJeDPzOWkwjpKEo52AyxdAvAViL046mwvxPYits7NzIFYmQ2ye8kOctL/FTBmNyWanjWJZLlIh+/NFuVnsOf9nOf63ZGeJR+YwhI2aLgyOkuQM67YvMydUgqkQNwtSwiMgVoP4PJ8rtZfgO+ni4Fi5fT9HxII1AwwAUMBl+4dCrAMxQ5wZ6yvHDmyh1Bfao+H8vJAYOU4R5kTJ46P5gqzwMHmcpem8kBG8jScKiB6xSeUHhkAMVxp6tCA9Jl7GE23L58eFQ6wE8RVRZnSo3PdBQTorfMRGKI6ScDaG+F2qMDBKZoNpZotG8sJsOWzpXHAtYD556THBMl8sgSdKCBvhwOX5B8g4YFyeIFbODYOryy9K7luSmxUpt8e28bKComR1xg6J8qNHfLvy4AKT1QF7mMGeGCmf631uXmSMjBuOgjDAAv6ACcSwpYAckAH4Hf0N/fAv2UggYAMhSAM8YCPXjHjES0cE8BsNCsBfEPGAaNTPTzrKA/lQ/3VUK/vagFTpaL7UIxM8gTgb18a9cA88DH59YHPAXXG3ET+m8sisxACiPzGYGEi0GOXBgayzYBMC/r/RhcKeB7OTcBGM5PA9HuEJoZPwkHCd0E24DeLAY2kUudUMfpHwJ+ZMMAl0w2iB8uxSfswON4WsnXA/3BPyh9xxBq4NbPDxMBNf3Bvm5gS1PzIUj3L7Xsuf55Ow/jEfuV7JUslJziJl9JdhjVr9HIX1Q424sA/92RJbih3BzmGnsAtYM9YAmNhJrBFrx45L8OhKeCxdCSOzRUm5ZcI4/BEbu2q7PrsvP83Nls8vqZcojzc7T7IZWDm5c4T8tPQ8pi88jXnMEAHH1prpYGfvAoDkbJcdHW8Z0jMbYVz8riucC8CEI8PDw83fdWHw5KjTBYDy6rvO/APcrnYAnC/kiIX5Mp3kOAYE+F9DGe4KLaAHjIA5zMcBOAMP4AMCwEQQAWJAIpgOK54OsiHnWWAeKAQloAysAuvBZrAd7AL7wEFwGDSAZnAKnAWXwBVwHdyF66IXvAAD4D0YQhCEhNAQOqKF6CMmiBXigLgiXkgAEoZEIYlIMpKGCBAxMg9ZjJQha5DNyE6kCvkdOYacQi4gnchtpAfpQ94gn1EMpaLqqC5qio5DXVFfNBSNQaehaehMtAAtRlegG9FK9ABaj55CL6HX0W70BTqIAUwRY2AGmA3mirGwCCwJS8WE2AKsFCvHKrEarAn+zlexbqwf+4QTcTrOxG3g2gzGY3EOPhNfgC/HN+P78Hq8Db+K9+AD+DcCjaBDsCK4E0IICYQ0wixCCaGcsIdQRzgD900v4T2RSGQQzYgucF8mEjOIc4nLiVuJtcQWYifxEXGQRCJpkaxInqQIEpuURyohbSIdIJ0kdZF6SR/JimR9sgM5kJxEFpCLyOXk/eQT5C7yU/KQgoqCiYK7QoQCV2GOwkqF3QpNCpcVehWGKKoUM4onJYaSQSmkbKTUUM5Q7lHeKioqGiq6KU5W5CsuUtyoeEjxvGKP4ieqGtWSyqJOpYqpK6h7qS3U29S3NBrNlOZDS6Ll0VbQqminaQ9oH5XoSrZKIUpcpYVKFUr1Sl1KL5UVlE2UfZWnKxcolysfUb6s3K+ioGKqwlJhqyxQqVA5pnJTZVCVrmqvGqGarbpcdb/qBdVnaiQ1U7UANa5asdoutdNqj+gY3YjOonPoi+m76WfovepEdTP1EPUM9TL1g+od6gMaahrjNeI0ZmtUaBzX6GZgDFNGCCOLsZJxmHGD8XmM7hjfMbwxy8bUjOka80FzrKaPJk+zVLNW87rmZy2mVoBWptZqrQat+9q4tqX2ZO1Z2tu0z2j3j1Uf6zGWM7Z07OGxd3RQHUudKJ25Ort02nUGdfV0g3RzdTfpntbt12Po+ehl6K3TO6HXp0/X99Ln66/TP6n/nKnB9GVmMTcy25gDBjoGwQZig50GHQZDhmaGsYZFhrWG940oRq5GqUbrjFqNBoz1jScZzzOuNr5jomDiapJussHknMkHUzPTeNMlpg2mz8w0zULMCsyqze6Z08y9zWeaV5pfsyBauFpkWmy1uGKJWjpZpltWWF62Qq2crfhWW606rQnWbtYC60rrmzZUG1+bfJtqmx5bhm2YbZFtg+3LccbjksatHndu3Dc7J7ssu912d+3V7CfaF9k32b9xsHTgOFQ4XHOkOQY6LnRsdHw93mo8b/y28bec6E6TnJY4tTp9dXZxFjrXOPe5GLsku2xxuemq7hrputz1vBvBzc9toVuz2yd3Z/c898PurzxsPDI99ns8m2A2gTdh94RHnoaebM+dnt1eTK9krx1e3d4G3mzvSu+HPkY+XJ89Pk99LXwzfA/4vvSz8xP61fl9YLmz5rNa/DH/IP9S/44AtYDYgM0BDwINA9MCqwMHgpyC5ga1BBOCQ4NXB98M0Q3hhFSFDEx0mTh/YlsoNTQ6dHPowzDLMGFY0yR00sRJayfdCzcJF4Q3RICIkIi1EfcjzSJnRv4xmTg5cnLF5CdR9lHzos5F06NnRO+Pfh/jF7My5m6seaw4tjVOOW5qXFXch3j/+DXx3QnjEuYnXErUTuQnNiaRkuKS9iQNTgmYsn5K71SnqSVTb0wzmzZ72oXp2tOzph+foTyDPeNIMiE5Pnl/8hd2BLuSPZgSkrIlZYDD4mzgvOD6cNdx+3ievDW8p6meqWtSn6V5pq1N60v3Ti9P7+ez+Jv5rzOCM7ZnfMiMyNybOZwVn1WbTc5Ozj4mUBNkCtpy9HJm53TmWuWW5HbPdJ+5fuaAMFS4R4SIpoka89ThNaddbC7+RdyT75Vfkf9xVtysI7NVZwtmt8+xnLNsztOCwILf5uJzOXNb5xnMK5zXM993/s4FyIKUBa0LjRYWL+xdFLRoXyGlMLPwzyK7ojVF7xbHL24q1i1eVPzol6BfqkuUSoQlN5d4LNm+FF/KX9qxzHHZpmXfSrmlF8vsysrLviznLL/4q/2vG38dXpG6omOl88ptq4irBKturPZevW+N6pqCNY/WTlpbv465rnTdu/Uz1l8oH1++fQNlg3hD98awjY2bjDet2vRlc/rm6xV+FbVbdLYs2/JhK3dr1zafbTXbdbeXbf+8g7/j1s6gnfWVppXlu4i78nc92R23+9xvrr9V7dHeU7bn617B3u59Ufvaqlyqqvbr7F9ZjVaLq/sOTD1w5aD/wcYam5qdtYzaskPgkPjQ89+Tf79xOPRw6xHXIzVHTY5uqaPXldYj9XPqBxrSG7obExs7j0081trk0VT3h+0fe5sNmiuOaxxfeYJyovjE8MmCk4MtuS39p9JOPWqd0Xr3dMLpa22T2zrOhJ45fzbw7OlzvudOnvc833zB/cKxi64XGy45X6pvd2qv+9Ppz7oO5476yy6XG6+4XWnqnNB5osu769RV/6tnr4Vcu3Q9/Hrnjdgbt25Ovdl9i3vr2e2s26/v5N8ZurvoHuFe6X2V++UPdB5U/sPiH7Xdzt3He/x72h9GP7z7iPPoxWPR4y+9xU9oT8qf6j+teubwrLkvsO/K8ynPe1/kvhjqL/lL9a8tL81fHn3l86p9IGGg97Xw9fCb5W+13u59N/5d62Dk4IP32e+HPpR+1Pq475Prp3Of4z8/HZr1hfRl41eLr03fQr/dG84eHs5lC9nSqwAGG5qaCsCbvQDQEgGgX4H3ByXZ20sqiOy9KEXgP2HZ+0wqzgDUwE5y5Wa1AHAINjMfGBs2ydU7xgegjo6jTS6iVEcHWSwqfMEQPg4Pv4X3GFITAF+Fw8NDW4eHv+6GZG8D0DJT9uaTCBHe73dIY3QxcnDwk/wTbjZscZuwTZ0AAAZUSURBVHja7VttTFNXGH4OlIKt0EJdG0REUzZxotlcmmxEjRqH0TCcMpxGYmaWSTKWOJPxY3MxxmTLEhMnmcsSt8jin8k2gUEyIjJjcECmmSRaDSZUBUqx1UIL/aAXytkPF6U9p59wK8T7/Dz33POec573++YSSikkvDhIkq5AIlyCRLgEiXAJEuESJMIlSIRLeJ6QSVcwN+F3Wqnv8SP4JwEiA4g8HcrcPDIvCZ8auEDvn6ubNqKB/sgPMR3Gdmo3HXPHJz99Xy20y5RP5HmNtO/kcUxOn6Asgf7T/dz9jNTupsOW4NFC6I8c5c53tX5Brdd7g0bzoT/yNXe+724LfdRWB5/Dw3tMAQ1SC7ZAVbQR6dmamBXgubj00c7moBE7+ttNMbX8SEqcwuXFz8gGgGSAubWU0ItnlldzLs2I+03d7P7t7dTGkA0krS5nFxYGqa32A2r+vTYU2U/vytdTB9vZL+dJDPd2U2cve6CJqxcTIn7hrvLIkybCLWAguvWFrNe6VYMR22QA6Y/rT4PVgkIsL309QMeo8zrtP3EYYxZPDCdZMD8I93Y3B7rPp7gCq8kZtZXTiTiEayug06tmHAcVGyqhkAePejD82x/PdOb2T9Rp47z7TmXQhfTQgdMnMJGg+09wDLdTZ4cx5FNXeyd0+m1RrZT66kZMjPE0Vg6M/g0PYy0KZO3aPkvn0BHtrp30wfmGwGFHHYZub6HZqxywNrayr6nfR/YaXYDCOS58E5Jsol4L5cqXkTQ+At/gHfhs5vlF+NSDK3ALYSZYmgBER7iq+GOiCvHMfdlCPRZjUNysQqZGRmbrLMn6vSRrcQOTwHn+rMFDowM+1raRVb4j8D6GWqi9j+fGNch47xheWqFj9uu+eYHaL9ZhQvDOfZc++k9zJA+AvtaemX2vtbdTa5eRyYqXlxrIbJ+Hm8AJRrh7zZxE7RAytYEK5+ps4pKt+eg7LtkAoFxTRpZW/0p071bFseN+mjjCmWRNwZ02eb1xZnw3sYmSfFOlSBmggejeyo9iIpuoAYPUfc/OulzDIai1kT3RwlWFMSvwuKkjcRbOJmseyFYfQPriYOJv4OFte1xW7jf9Qh3BNbJ8I3KL8ohY51JsrkJahDlp2zgKJ4xAEFjrzisuEG2vY0ODiSKcn6wp39wGTdE6NgZ3dsQl41F9A2sJpftEPlsO0e0pCf1YvRM5a1n3PGW/x1Yr8tWi7tTc3ZUYwrnJmrIEi7QgyflvI5Vpo9VjxD4Zk5X7rv3IytBWQLdCRcQ+n0y/n2Tl8UKUAupyft1PPZw2oUIn6j5TUtMTQzgvWUvbsPX/dDePZBrymZrW0XEregFCD7VeusFmxTu2I1FQrdvKllUFB6EJEY+JQskOekZE36f4hIforMlSXfAOmKhnoI9i0RJO56o5ahGutjNMLZtUUMVkxWKC546S0zNCX7zmFTANXOFfkXc5Jn4dHqqz5mr8HK6wbxoxeNNKc9bowpPmbKe2bjNbhpUZEkZ2SEyGf0w4ZWn/5R66dLM4idsyw1axLTx8Zy1iGXH1cmQJnH61fP2HmPOQF5AFWnZ4oqsGI0O+iPmL19QdcyWzcGWRuIRH7KxFgqMB9jCH9z/glWHFyN2gJ5gHyCqp4Dafhs9WwnqD34Dy3m2jg9/vppbzNbELTCskorr0UJ01IleACsFjABXYWD/aeROaMgO/DGts4CRwrRiovUcp152Owy/kYnnV4fAK4W6A6asGyiux9FV7Z02ZkrJLSVZePR1m2qseuFqOwvXXEpq24jWkyAQI1jvwWaaHrqz4KorEJmuhP/w/iced9P7pU5ia7iV6GgAYOGXYObjd/LgoWHrFOZMIn7Qyyz7D2Mnj/KUFM8ZvmTE+H7J0XrJG8ksi1DZFRL04eLAX5muDNLgMs13qijpbntNYUEhyP6lGSoLEiUS4lZusZRS9EfHNjE07WWvubAksLtrOQJjF3c6KkvjjN3+iMpCl1d9y2sxhTWoOEe40wcvrrOWmRox/ycs2Qxnck3BPq0/9Juronsl3YTUT1aK+BJUy9L4X5TPrkLQYIqY8h2gP/Exy9xxEmlYTmjB1PhSGCmj3H4tPuaS/R+cufLY+OuUHkpJlSNXmzEqyKBH+gkH6EUEiXIJEuASJcAkS4RIkwiXMNfwH9WNck/oNRg0AAAAASUVORK5CYII=" alt="AZLYC">
+    </a>
+    <nav class="nav-primary" aria-label="Primary">
+      <a href="#platform">Platform</a>
+      <a href="#advisory">Advisory</a>
+      <a href="#operation">In operation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">
+      Speak with us
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
   </div>
 </header>
 
-<!-- HERO -->
-<section>
-  <div>
-    <div class="mast">A strategic governance studio · Est. 2017</div>
-  </div>
-  <div>
-    <h1>The operating system<br/>of <span class="ital">institutions</span><br/>is <span class="ital-orange">changing.</span></h1>
-  </div>
-  <div>
-    <div>
-      <div class="mast">— A note from the firm</div>
-      <p>AZLYC is a strategic governance and systems transformation studio. We work where institutional categories no longer match the questions facing boards, founders and institutions — and where the answers carry institutional consequences.</p>
-      <div>
-        <a href="#sec-1" class="btn btn--green">Explore domains →</a>
-        <a href="#sec-6" class="btn btn--ghost">Begin a conversation</a>
-      </div>
-    </div>
-    <div>
-      <div class="mast">— In this issue</div>
-      <ol>
-        <li><span class="mast">i.</span><span>Governance &amp; Institutional Architecture</span></li>
-        <li><span class="mast">ii.</span><span>Digital &amp; Tokenized Infrastructures</span></li>
-        <li><span class="mast">iii.</span><span>Organizational Transformation</span></li>
-        <li><span class="mast">iv.</span><span>Responsible &amp; AI Governance</span></li>
-        <li><span class="mast">v.</span><span>Strategic Advisory &amp; Complex Environments</span></li>
-        <li><span class="mast">vi.</span><span>Sustainability &amp; Impact</span></li>
-        <li><span class="mast">vii.</span><span>Executive Education</span></li>
-      </ol>
-    </div>
-    </div>
-</section>
+<main id="top">
 
-<!-- MARQUEE -->
-<div class="marquee-band">
-  <div class="marquee-track">
-    <span class="marquee-item">Better-governed institutions make the world more navigable.</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">Tokenization · RWA</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">DAO governance</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">AI Governance</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">CSRD / ESRS</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">CNMV &amp; FCA Sandboxes</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">Boards &amp; Institutions</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">Better-governed institutions make the world more navigable.</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">Tokenization · RWA</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">DAO governance</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">AI Governance</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">CSRD / ESRS</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">CNMV &amp; FCA Sandboxes</span>
-    <span class="marquee-item"><span class="star"></span></span>
-    <span class="marquee-item">Boards &amp; Institutions</span>
-  </div>
-</div>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid reveal-stack">
 
-<!-- SEC-0 · APPROACH -->
-<section id="sec-0">
-  <div>
-    <div>
-      <div class="mast mast--green">02 · Approach</div>
-      <h2 class="ser">When existing categories no longer <span class="ital">hold.</span></h2>
-    </div>
-    <div>
-      <p>Institutions are operating beyond the limits of traditional organizational categories. AZLYC was built around that observation — a studio for governance, systems and transformation work where the question is not yet sorted by discipline, and where the answer has institutional consequences.</p>
-    </div>
-  </div>
-  <div>
-    <div class="frame lift">
-      <div class="ser">i.</div>
-      <h3 class="ser">The question</h3>
-      <p>Not yet sorted by discipline — where boards, founders and institutions face decisions that don't fit established categories.</p>
-    </div>
-    <div class="frame lift">
-      <div class="ser">ii.</div>
-      <h3 class="ser">The work</h3>
-      <p>Sits earlier than legal advice, technical consulting or transformation programs priced by the slide.</p>
-    </div>
-    <div class="frame lift">
-      <div class="ser">iii.</div>
-      <h3 class="ser">The conviction</h3>
-      <p>Better-governed institutions make the world more navigable. That is the conviction the studio operates from.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SEC-WHY · MANIFESTO -->
-<section id="sec-why">
-  <div>
-    <div>
-      <div class="mast mast--green">Manifesto</div>
-      <h2 class="ser">Why this work <span class="ital">matters.</span></h2>
-    </div>
-    <div>
-      <p>Institutions are operating under pressures that did not exist a generation ago. Digital assets and tokenization are redrawing how value is coordinated, owned and governed — not at the edges, but at the centre. Sustainability has stopped being a reporting exercise and become a strategic plan for not falling into crisis. Artificial intelligence is being adopted faster than the institutions absorbing it can write the rules. Regulation arrives in waves — MiCA, the EU AI Act, CSRD, DLT — and each one redraws what compliance means before the previous one is digested. Ethics has moved from rhetoric to operating constraint.</p>
-      <p>Underneath all of this, an older question survives: what is an institution for, and what does it take to build one that endures.</p>
-      <p>AZLYC was built around the conviction that this question deserves more than the market currently offers. Not legal advice. Not technical consulting. Not transformation programs priced by the slide. The work sits earlier than any of those — in the question of how a board, a founder or an institution holds its structure, its technology and its culture under pressures none of them were designed to face. With integrity. In a way that outlasts the leadership that began it.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SEC-1 · DOMAINS (7 fields, mapped to service-blocks grid) -->
-<section id="sec-1">
-  <div>
-    <div>
-      <div class="mast mast--green">03 · Domains</div>
-      <h2 class="ser">Seven fields of <span class="ital">practice.</span></h2>
-    </div>
-    <div class="mast">Configured per engagement, organized as a system.</div>
-  </div>
-  <div>
-    <div class="service-block">
-      <div class="num">i.</div>
-      <h3 class="ser">Governance &amp; Institutional Architecture</h3>
-      <p>Designing how decisions are made before they are made. Governance models, board architecture, decision-rights and accountability frameworks for organizations whose structure no longer matches their environment.</p>
-      <span class="arrow-c">→</span>
-    </div>
-    <div class="service-block">
-      <div class="num">ii.</div>
-      <h3 class="ser">Digital &amp; Tokenized Infrastructures</h3>
-      <p>Coordination layers for assets that did not exist five years ago. Tokenization frameworks, digital-asset structuring and the institutional architecture that allows regulated and unregulated value to coexist.</p>
-      <span class="arrow-c">→</span>
-    </div>
-    <div class="service-block">
-      <div class="num">iii.</div>
-      <h3 class="ser">Organizational Transformation</h3>
-      <p>Change that survives the leadership that initiated it. Cultural transition, leadership alignment, values-based operating systems and the cultural work that turns regulatory change into durable institutional change.</p>
-      <span class="arrow-c">→</span>
-    </div>
-    <div class="service-block">
-      <div class="num">iv.</div>
-      <h3 class="ser">Responsible &amp; AI Governance</h3>
-      <p>Frameworks for technologies whose rules are still being written. AI governance, ethics frameworks and risk architecture for institutions adopting AI inside regulated environments — built to outlast the first regulatory cycle.</p>
-      <span class="arrow-c">→</span>
-    </div>
-    <div class="service-block">
-      <div class="num">v.</div>
-      <h3 class="ser">Strategic Advisory &amp; Complex Environments</h3>
-      <p>Counsel for situations that do not match the playbook. Senior strategic advisory in multilateral, cross-jurisdictional and high-stakes environments — where the question is institutional, the surface area is wide, and the implementation is irreversible.</p>
-      <span class="arrow-c">→</span>
-    </div>
-    <div class="service-block">
-      <div class="num">vi.</div>
-      <h3 class="ser">Sustainability &amp; Impact</h3>
-      <p>What gets reported is no longer what gets operated. Sustainability is becoming institutional infrastructure — embedded in governance, decision-rights and operating models, where the reporting cycle is no longer the thing that defines the practice.</p>
-      <span class="arrow-c">→</span>
-    </div>
-    <div class="service-block">
-      <div class="num">vii.</div>
-      <h3 class="ser">Executive Education</h3>
-      <p>Teaching the categories before they harden. Closed sessions for boards, executives and policy bodies — designed as operating tools rather than conference content. Governance, technology and transformation taught as one system.</p>
-      <span class="arrow-c">→</span>
-    </div>
-  </div>
-</section>
-
-<!-- SEC-2 · PRACTICE (specialty + tags + stats) -->
-<section id="sec-2">
-  <div>
-    <div class="mast">— Tokenization &amp; Blockchain Maturity</div>
-    <h2 class="ser">Real-world assets, <span class="ital">institutional infrastructure.</span></h2>
-  </div>
-  <div>
-    <div>
-      <p>Tokenization of real-world assets — debt, equity, real estate, funds — as institutional infrastructure rather than experiment. We work upstream of the smart contract: issuer architecture, custody design, investor protection, regulator interface and the cross-jurisdictional posture that allows the structure to survive the next regulatory cycle.</p>
-      <p>AZLYC structured the first debt-tokenization pilot to complete the Spanish CNMV regulatory sandbox (2021–22). Active mandates in Europe and the Caucasus under MiCA, FCA Digital Securities Sandbox and National Bank of Georgia frameworks.</p>
-      <p>AZLYC also operates BMM (Blockchain Maturity Model) assessments as a BMM-authorized Business Associate (BBA) of the Government Blockchain Association (GBA). Lead assessor: Spain Chapter Leader, GBA — certified BMM Assessor.</p>
-      <div>
-        <span class="tag tag--green">RWA tokenization</span>
-        <span class="tag">DAO governance</span>
-        <span class="tag">MiCA &amp; CASP</span>
-        <span class="tag">CNMV Sandbox</span>
-        <span class="tag">FCA DSS</span>
-        <span class="tag">National Bank of Georgia</span>
-        <span class="tag">BMM Assessor (GBA)</span>
-        <span class="tag">Custody design</span>
-        <span class="tag">Issuer architecture</span>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div class="ser">2017</div>
-      <div class="mast">Established</div>
-    </div>
-    <div>
-      <div class="ser">3</div>
-      <div class="mast">Continents · ES · IT · GE · CA</div>
-    </div>
-    <div>
-      <div class="ser">CNMV</div>
-      <div class="mast">First debt-tokenization sandbox</div>
-    </div>
-    <div>
-      <div class="ser">GBA</div>
-      <div class="mast">BMM Assessor · Spain Chapter</div>
-    </div>
-  </div>
-</section>
-
-<!-- SEC-4 · ENGAGEMENTS (3 cases) -->
-<section id="sec-4">
-  <div>
-    <div>
-      <div class="mast mast--green">04 · Practice</div>
-      <h2 class="ser">Selected <span class="ital">engagements.</span></h2>
-    </div>
-    <p>Three representative engagements — anonymized, paraphrased, condensed. References available on request, under NDA. AZLYC does not publish client lists, logos or case studies.</p>
-  </div>
-  <div>
-    <article class="frame lift">
-      <div>
-        <div class="ser">01</div>
-        <div class="mast">2025–26</div>
-      </div>
-      <div>
-        <div class="mast mast--green">— Georgia · Digital assets · Embedded</div>
-        <h3 class="ser">Institutional digital-asset platform</h3>
-        <p>Digital-asset structuring and licensing for an institutional platform under the National Bank of Georgia framework — governance, custody architecture, regulatory interface and cross-border operating posture.</p>
-        <div>
-          <span class="tag">Digital assets</span>
-          <span class="tag">National Bank of Georgia</span>
-          <span class="tag">Cross-border</span>
+        <div class="hero-meta">
+          <div class="hero-meta-tags">
+            <span>Operating layer</span>
+            <span class="sep"></span>
+            <span>Governance</span>
+            <span class="sep"></span>
+            <span>Digital assets</span>
+            <span class="sep"></span>
+            <span>Transformation</span>
+          </div>
+          <div>Est. 2018</div>
         </div>
-      </div>
-      <div>
-        <a href="#sec-6" class="btn btn--ghost">Enquire →</a>
-        <div class="placeholder-warm"></div>
-      </div>
-    </article>
 
-    <article class="frame lift">
-      <div>
-        <div class="ser">02</div>
-        <div class="mast">2022–23</div>
-      </div>
-      <div>
-        <div class="mast mast--green">— Italy · ESG strategy · Strategic advisory</div>
-        <h3 class="ser">CSRD transition for a pharmaceutical group</h3>
-        <p>Sustainability strategy and ESG governance architecture for an Italian pharmaceutical group navigating the transition from voluntary reporting to mandatory CSRD-aligned obligations.</p>
-        <div>
-          <span class="tag">CSRD</span>
-          <span class="tag">ESG governance</span>
-          <span class="tag">Pharma</span>
+        <div class="hero-index">01 — <span>Positioning</span></div>
+
+        <h1 class="hero-title">
+          Operating systems for governance, technology and <em>institutional change</em>.
+        </h1>
+
+        <div class="hero-body">
+          <p class="hero-lede">
+            AZLYC is an international advisory platform that structures, coordinates and operates governance and transformation across regulated, cross-border environments — from digital-asset frameworks and AI policy to board redesign, institutional rollout and long-horizon organizational evolution.
+          </p>
+          <div class="hero-actions">
+            <a href="#platform" class="btn-primary">
+              Explore capabilities
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#contact" class="btn-ghost">
+              Speak with us
+            </a>
+          </div>
         </div>
-      </div>
-      <div>
-        <a href="#sec-6" class="btn btn--ghost">Enquire →</a>
-        <div class="placeholder-cool"></div>
-      </div>
-    </article>
 
-    <article class="frame lift">
-      <div>
-        <div class="ser">03</div>
-        <div class="mast">2019–22</div>
       </div>
-      <div>
-        <div class="mast mast--green">— Central America · Cultural transformation</div>
-        <h3 class="ser">Ethos &amp; governance redesign for a private university</h3>
-        <p>Ethos and governance redesign for a private university in Central America — leadership alignment, values architecture and the cultural work that turned a regulatory transition into durable institutional change.</p>
-        <div>
-          <span class="tag">Cultural transformation</span>
-          <span class="tag">Higher education</span>
-          <span class="tag">Values architecture</span>
-        </div>
-      </div>
-      <div>
-        <a href="#sec-6" class="btn btn--ghost">Enquire →</a>
-        <div class="placeholder-warm"></div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- SEC-6 · CONTACT -->
-<section id="sec-6">
-  <div class="mast mast--green">— Contact</div>
-  <h2 class="ser">Begin a <span class="ital">conversation.</span></h2>
-  <p>Selective and discreet. A senior advisor will reply within two working days.</p>
-  <div>
-    <div>
-      <div class="mast">Direct</div>
-      <a href="mailto:bmm@azlyc.com" class="ser ital">bmm@azlyc.com</a>
-      <div class="mast">Hours</div>
-      <div class="ser">Mon — Fri, by appointment</div>
-      <div class="mast">Entity</div>
-      <div class="ser">AZLYC BV · Netherlands</div>
-      <div class="mast">Established</div>
-      <div class="ser">2017</div>
     </div>
-    <form action="https://formspree.io/f/mdawdroa" method="POST">
-      <div>
-        <span class="lbl">Name</span>
-        <input name="name" type="text" required />
-      </div>
-      <div>
-        <span class="lbl">Email</span>
-        <input name="email" type="email" required />
-      </div>
-      <div>
-        <span class="lbl">Message</span>
-        <textarea name="message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn--green">Send →</button>
-    </form>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div>
-    <img src="data:image/jpeg;base64,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" alt="AZLYC" class="logo logo--footer" />
-    <div class="mast">
-      <div>Strategic governance and systems transformation studio</div>
-      <div>AZLYC BV · Netherlands · Est. 2017</div>
+  <section class="section" id="platform">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="section-eyebrow"><strong>02</strong> Platform</div>
+        <h2 class="section-title">
+          An operating layer for governance, technology and institutional transition — not a consulting practice.
+        </h2>
+        <p class="section-lede">
+          AZLYC structures and operates the governance machinery that complex transitions require — across regulation, technology and organization.
+        </p>
+      </div>
+      <!-- content continues here in the full build -->
     </div>
-  </div>
-  <div>
-    <div class="mast">© 2026 AZLYC BV — Studio at the intersection.</div>
-    <div>
-      <a href="#sec-0" class="mast">Approach</a>
-      <a href="#sec-1" class="mast">Domains</a>
-      <a href="#sec-2" class="mast">Practice</a>
-      <a href="mailto:bmm@azlyc.com" class="mast">bmm@azlyc.com</a>
-    </div>
-  </div>
-</footer>
+  </section>
 
-</div>
-
+</main>
 
 <script>
-(function(){
-const T={
-'page-title':'AZLYC — Estudio de gobernanza estratégica y transformación de sistemas',
-'nav':['Enfoque','Manifiesto','Ámbitos','Práctica','Contacto'],
-'nav-cta':'Iniciar una conversación →',
-'strip-left':'AZLYC · Gobernanza estratégica',
-'htags':['Gobernanza','Infraestructuras digitales','Transformación','Sostenibilidad','Est. 2017'],
-'h-secnum':'01 — Práctica',
-'h1':'The operating system<br/>of <span class="ital">instituciones</span><br/>está <span class="ital-orange">cambiando.</span>',
-'h-lede':'AZLYC es un estudio de gobernanza estratégica y transformación de sistemas. Trabajamos donde las categorías institucionales ya no responden a las preguntas que enfrentan los consejos de administración, los fundadores y las instituciones — y donde las respuestas tienen consecuencias institucionales.',
-'hcta':['Explorar ámbitos →','Iniciar una conversación'],
-'marquee':['Las instituciones mejor gobernadas hacen el mundo más navegable.','Tokenización · ARR','Gobernanza de DAOs','Gobernanza de IA','CSRD / ESRS','Sandboxes regulatorios','Consejos e instituciones'],
-'s0-mast':'02 · Enfoque',
-'s0-h2':'Cuando las categorías existentes ya no <span class="ital">responden.</span>',
-'s0-p':'Las instituciones operan más allá de los límites de las categorías organizativas tradicionales. AZLYC nació alrededor de esa observación — un estudio para el trabajo de gobernanza, sistemas y transformación donde la pregunta aún no está ordenada por disciplina, y donde la respuesta tiene consecuencias institucionales.',
-'s0-cards':[
-  ['i.','La pregunta','Aún no ordenada por disciplina — donde consejos, fundadores e instituciones afrontan decisiones que no encajan en categorías establecidas.'],
-  ['ii.','El trabajo','Se sitúa antes que el asesoramiento legal, la consultoría técnica o los programas de transformación medidos por diapositivas.'],
-  ['iii.','La convicción','Las instituciones mejor gobernadas hacen el mundo más navegable. Esa es la convicción desde la que opera el estudio.']
-],
-'sw-mast':'Manifiesto',
-'sw-h2':'Por qué este trabajo <span class="ital">importa.</span>',
-'sw-ps':[
-  'Las instituciones operan bajo presiones que no existían hace una generación. Los activos digitales y la tokenización están redibujando cómo se coordina, posee y gobierna el valor — no en los márgenes, sino en el centro. La sostenibilidad ha dejado de ser un ejercicio de reporte para convertirse en un plan estratégico para no caer en crisis. La inteligencia artificial se adopta más rápido de lo que las instituciones pueden escribir las normas. La regulación llega en oleadas — MiCA, la Ley de IA de la UE, CSRD, DLT — y cada una redibuja lo que significa el cumplimiento antes de que la anterior haya sido asimilada. La ética ha pasado de la retórica a la restricción operativa.',
-  'Bajo todo esto, una pregunta más antigua sobrevive: para qué sirve una institución, y qué hace falta para construir una que perdure.',
-  'AZLYC nació con la convicción de que esta pregunta merece más de lo que el mercado ofrece actualmente. No asesoramiento legal. No consultoría técnica. No programas de transformación facturados por diapositiva. El trabajo se sitúa antes que todo eso — en la pregunta de cómo un consejo, un fundador o una institución sostiene su estructura, su tecnología y su cultura bajo presiones para las que ninguno fue diseñado. Con integridad. De una manera que sobreviva al liderazgo que lo inició.',
-  'Las instituciones mejor gobernadas hacen el mundo más navegable. Esa es la convicción desde la que opera el estudio.'
-],
-'s1-mast':'03 · Ámbitos',
-'s1-h2':'Siete campos de <span class="ital">práctica.</span>',
-'s1-intro':'Configurados por encargo, organizados como sistema.',
-'domains':[
-  ['i.','Gobernanza y Arquitectura Institucional','Modelos de gobernanza, arquitectura del consejo, derechos de decisión y marcos de rendición de cuentas para organizaciones cuya estructura ya no responde a su entorno.'],
-  ['ii.','Infraestructuras Digitales y Tokenizadas','Marcos de tokenización, estructuración de activos digitales y la arquitectura institucional que permite que el valor regulado y no regulado coexistan.'],
-  ['iii.','Transformación Organizativa','Transición cultural, alineamiento del liderazgo, sistemas operativos basados en valores y el trabajo cultural que convierte el cambio regulatorio en cambio institucional duradero.'],
-  ['iv.','Gobernanza Responsable e IA','Gobernanza de IA, marcos éticos y arquitectura de riesgos para instituciones que adoptan IA en entornos regulados — diseñados para sobrevivir al primer ciclo regulatorio.'],
-  ['v.','Asesoría Estratégica y Entornos Complejos','Asesoría estratégica senior en entornos multilaterales, multijurisdiccionales y de alto riesgo — donde la pregunta es institucional, la superficie es amplia y la implementación es irreversible.'],
-  ['vi.','Sostenibilidad e Impacto','La sostenibilidad se convierte en infraestructura institucional — integrada en la gobernanza, los derechos de decisión y los modelos operativos, donde el ciclo de reporting ya no es lo que define la práctica.'],
-  ['vii.','Formación Ejecutiva','Sesiones cerradas para consejos, ejecutivos y organismos reguladores — diseñadas como herramientas operativas, no como contenido de conferencia. Gobernanza, tecnología y transformación enseñadas como un sistema.']
-],
-'s2-mast':'— Tokenización y Madurez Blockchain',
-'s2-h2':'Activos del mundo real, <span class="ital">infraestructura institucional.</span>',
-'s2-ps':[
-  'Tokenización de activos del mundo real — deuda, acciones, inmuebles, fondos — como infraestructura institucional, no como experimento. Trabajamos antes del contrato inteligente: arquitectura del emisor, diseño de custodia, protección del inversor, interfaz con el regulador y la postura jurisdiccional que permite que la estructura sobreviva al próximo ciclo regulatorio.',
-  'AZLYC estructuró el primer piloto de tokenización de deuda que completó el sandbox regulatorio de la CNMV española (2021–22). Mandatos activos en Europa y el Cáucaso bajo MiCA, el sandbox de valores digitales de la FCA y los marcos del Banco Nacional de Georgia.',
-  'AZLYC también opera evaluaciones BMM (Blockchain Maturity Model) como Business Associate autorizado por BMM (BBA) de la Government Blockchain Association (GBA). Evaluador principal: líder del capítulo español de la GBA — evaluador BMM certificado.'
-],
-'s2-tags':['Tokenización ARR','Gobernanza de DAOs','MiCA y CASP','Sandbox CNMV','DSS FCA','Banco Nacional de Georgia','Evaluador BMM (GBA)','Diseño de custodia','Arquitectura del emisor'],
-'s2-stats':[['2017','Establecido'],['3','Continentes · ES · IT · GE · CA'],['CNMV','Primer sandbox de tokenización de deuda'],['GBA','Evaluador BMM · Capítulo España']],
-'s4-mast':'04 · Práctica',
-'s4-h2':'Mandatos <span class="ital">seleccionados.</span>',
-'s4-p':'Tres mandatos representativos — anonimizados, parafraseados, condensados. Referencias disponibles bajo solicitud y NDA. AZLYC no publica listas de clientes, logotipos ni estudios de caso.',
-'engagements':[
-  ['01','2025–26','— Georgia · Activos digitales · Integrado','Plataforma institucional de activos digitales','Estructuración y licenciamiento de activos digitales para una plataforma institucional bajo el marco del Banco Nacional de Georgia — gobernanza, arquitectura de custodia, interfaz regulatoria y postura operativa transfronteriza.',['Activos digitales','Banco Nacional de Georgia','Transfronterizo']],
-  ['02','2022–23','— Italia · Estrategia ESG · Asesoría estratégica','Transición CSRD para un grupo farmacéutico','Estrategia de sostenibilidad y arquitectura de gobernanza ESG para un grupo farmacéutico italiano que navega la transición del reporting voluntario a las obligaciones obligatorias alineadas con CSRD.',['CSRD','Gobernanza ESG','Farmacia']],
-  ['03','2019–22','— Centroamérica · Transformación cultural','Rediseño de ethos y gobernanza en una universidad privada','Rediseño de ethos y gobernanza para una universidad privada en Centroamérica — alineamiento del liderazgo, arquitectura de valores y el trabajo cultural que convirtió una transición regulatoria en cambio institucional duradero.',['Transformación cultural','Educación superior','Arquitectura de valores']]
-],
-'enquire':'Consultar →',
-'s6-mast':'— Contacto',
-'s6-h2':'Iniciemos una <span class="ital">conversación.</span>',
-'s6-p':'Selectivo y discreto. Un asesor sénior responderá en dos días hábiles.',
-'s6-lbls':['Directo','Horario','Entidad','Establecido'],
-'s6-vals':['Lun — Vie, con cita previa','AZLYC BV · Países Bajos · Est. 2017','2017'],
-'form':['Nombre','Correo electrónico','Mensaje','Enviar →'],
-'ft-tag':'Estudio de gobernanza estratégica y transformación de sistemas.',
-'ft-copy':'© 2026 AZLYC BV — Multidisciplinar por diseño.',
-'ft-links':['Enfoque','Ámbitos','Práctica']
-};
+  // Mark page as JS-enabled so reveal animations apply
+  document.documentElement.classList.add('js-on');
 
-let cur='en';
-function s(sel){return document.querySelector(sel)}
-function sa(sel){return Array.from(document.querySelectorAll(sel))}
-
-function applyES(){
-  document.documentElement.lang='es';
-  document.title=T['page-title'];
-  const dm=s('meta[name="description"]');if(dm)dm.content='AZLYC es un estudio de gobernanza estratégica y transformación de sistemas que opera en la intersección de instituciones, tecnología y entornos complejos.';
-  // Nav
-  sa('nav.top ul a').forEach((a,i)=>{if(T.nav[i])a.innerHTML=T.nav[i];});
-  const cta=s('nav.top .cta');if(cta)cta.innerHTML=T['nav-cta'];
-  // Strip
-  const strips=sa('.header-strip > span');if(strips[0])strips[0].innerHTML=T['strip-left'];
-  // Hero tags
-  const heroSec=document.querySelector('.dirC > section:first-of-type');
-  if(heroSec){
-    heroSec.querySelectorAll('.pre-tags span').forEach((el,i)=>{if(T.htags[i])el.innerHTML=T.htags[i];});
-    const sn=heroSec.querySelector('.sec-num');if(sn)sn.innerHTML='<b>01</b> — Práctica';
-    const h1=heroSec.querySelector('h1');if(h1)h1.innerHTML=T['h1'];
-    const lede=heroSec.querySelector('.lede');if(lede)lede.innerHTML=T['h-lede'];
-    heroSec.querySelectorAll('a.btn').forEach((a,i)=>{if(T.hcta[i])a.innerHTML=T.hcta[i];});
-  }
-  // Marquee — only text items (no .star)
-  let mi=0;sa('.marquee-item').forEach(el=>{if(!el.querySelector('.star')&&T.marquee[mi]){el.innerHTML=T.marquee[mi];mi++;}});
-  // Sec-0
-  const s0=s('#sec-0');if(!s0)return;
-  const s0mast=s0.querySelector('.mast--green');if(s0mast)s0mast.innerHTML=T['s0-mast'];
-  const s0h2=s0.querySelector('h2');if(s0h2)s0h2.innerHTML=T['s0-h2'];
-  const s0p=s0.querySelector('div:first-child > div:last-child p');if(s0p)s0p.innerHTML=T['s0-p'];
-  sa('#sec-0 .frame').forEach((c,i)=>{
-    if(!T['s0-cards'][i])return;
-    const [n,h,p]=T['s0-cards'][i];
-    const d=c.querySelector('div.ser');if(d)d.innerHTML=n;
-    const h3=c.querySelector('h3');if(h3)h3.innerHTML=h;
-    const cp=c.querySelector('p');if(cp)cp.innerHTML=p;
-  });
-  // Sec-why
-  const sw=s('#sec-why');if(!sw)return;
-  const swm=sw.querySelector('.mast--green');if(swm)swm.innerHTML=T['sw-mast'];
-  const swh2=sw.querySelector('h2');if(swh2)swh2.innerHTML=T['sw-h2'];
-  const swps=sa('#sec-why .sec-body p, #sec-why p');
-  let pi=0;swps.forEach(p=>{if(T['sw-ps'][pi])p.innerHTML=T['sw-ps'][pi++];});
-  // Sec-1
-  const s1=s('#sec-1');if(!s1)return;
-  const s1m=s1.querySelector('.mast--green');if(s1m)s1m.innerHTML=T['s1-mast'];
-  const s1h2=s1.querySelector('h2');if(s1h2)s1h2.innerHTML=T['s1-h2'];
-  const s1i=s1.querySelector('.domains-intro');if(s1i)s1i.innerHTML=T['s1-intro'];
-  sa('#sec-1 .service-block').forEach((d,i)=>{
-    if(!T.domains[i])return;
-    const [n,cat,p]=T.domains[i];
-    const num=d.querySelector('.num');if(num)num.innerHTML=n;
-    const h3=d.querySelector('h3');if(h3)h3.innerHTML=cat;
-    const dp=d.querySelector('p');if(dp)dp.innerHTML=p;
-  });
-  // Sec-2
-  const s2=s('#sec-2');if(!s2)return;
-  const s2m=s2.querySelector('div:first-child .mast');if(s2m)s2m.innerHTML=T['s2-mast'];
-  const s2h2=s2.querySelector('div:first-child h2');if(s2h2)s2h2.innerHTML=T['s2-h2'];
-  sa('#sec-2 p').forEach((p,i)=>{if(T['s2-ps'][i])p.innerHTML=T['s2-ps'][i];});
-  sa('#sec-2 .tag').forEach((t,i)=>{if(T['s2-tags'][i])t.innerHTML=T['s2-tags'][i];});
-  sa('#sec-2 > div:nth-child(3) > div').forEach((d,i)=>{
-    if(!T['s2-stats'][i])return;
-    const ser=d.querySelector('.ser');if(ser)ser.innerHTML=T['s2-stats'][i][0];
-    const mast=d.querySelector('.mast');if(mast)mast.innerHTML=T['s2-stats'][i][1];
-  });
-  // Sec-4
-  const s4=s('#sec-4');if(!s4)return;
-  const s4m=s4.querySelector('.mast--green');if(s4m)s4m.innerHTML=T['s4-mast'];
-  const s4h2=s4.querySelector('h2');if(s4h2)s4h2.innerHTML=T['s4-h2'];
-  const s4p=s4.querySelector('.sec-body p, div > p');if(s4p)s4p.innerHTML=T['s4-p'];
-  sa('#sec-4 article').forEach((art,i)=>{
-    if(!T.engagements[i])return;
-    const [n,y,sec,h,p,tags]=T.engagements[i];
-    const ser=art.querySelector('.ser');if(ser)ser.innerHTML=n;
-    const mast=art.querySelector('.mast:not(.mast--green)');if(mast)mast.innerHTML=y;
-    const mg=art.querySelector('.mast--green');if(mg)mg.innerHTML=sec;
-    const h3=art.querySelector('h3');if(h3)h3.innerHTML=h;
-    const ap=art.querySelector('p');if(ap)ap.innerHTML=p;
-    art.querySelectorAll('.tag').forEach((t,j)=>{if(tags[j])t.innerHTML=tags[j];});
-    const btn=art.querySelector('.btn--ghost');if(btn)btn.innerHTML=T.enquire;
-  });
-  // Sec-6
-  const s6=s('#sec-6');if(!s6)return;
-  const s6m=s6.querySelector('.mast--green');if(s6m)s6m.innerHTML=T['s6-mast'];
-  const s6h2=s6.querySelector('h2');if(s6h2)s6h2.innerHTML=T['s6-h2'];
-  const s6p=s6.querySelector('p');if(s6p)s6p.innerHTML=T['s6-p'];
-  sa('#sec-6 .ci-block .lbl').forEach((l,i)=>{if(T['s6-lbls'][i])l.innerHTML=T['s6-lbls'][i];});
-  const offices=sa('#sec-6 .office, #sec-6 .val');
-  offices.forEach((el,i)=>{if(T['s6-vals'][i])el.innerHTML=T['s6-vals'][i];});
-  sa('#sec-6 form .lbl').forEach((l,i)=>{if(T.form[i])l.innerHTML=T.form[i];});
-  const sub=s('#sec-6 button[type="submit"]');if(sub)sub.innerHTML=T.form[3];
-  // Footer
-  const ftag=s('footer .tagline');if(ftag)ftag.innerHTML=T['ft-tag'];
-  const fcopy=sa('footer .legal span');if(fcopy[0])fcopy[0].innerHTML=T['ft-copy'];
-  sa('footer ul a').forEach((a,i)=>{if(T['ft-links'][i])a.innerHTML=T['ft-links'][i];});
-}
-
-function applyEN(){
-  location.reload();
-}
-
-document.addEventListener('DOMContentLoaded',function(){
-  sa('.lang button').forEach(btn=>{
-    btn.addEventListener('click',function(){
-      const lang=this.dataset.lang;
-      if(lang===cur)return;
-      cur=lang;
-      sa('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
-      if(lang==='es')applyES();
-      else applyEN();
-    });
-  });
-  const saved=sessionStorage.getItem('azlyc-lang');
-  if(saved==='es'){
-    cur='es';
-    sa('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang==='es'));
-    applyES();
-  }
-});
-window.addEventListener('beforeunload',()=>sessionStorage.setItem('azlyc-lang',cur));
-})();
+  // Header scroll state
+  const header = document.getElementById('header');
+  let lastScroll = 0;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 12);
+    lastScroll = y;
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 </script>
+
 </body>
 </html>
