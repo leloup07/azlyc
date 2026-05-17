@@ -322,7 +322,7 @@ body { font-family: 'DM Sans', -apple-system, system-ui, sans-serif; -webkit-fon
     <a href="#sec-6">Contact</a>
   </nav>
   <div>
-    <div class="lang"><button class="on">EN</button><button>ES</button></div>
+    <div class="lang"><button class="on" data-lang="en">EN</button><button data-lang="es">ES</button></div>
     <a href="#sec-6" class="btn">Begin a conversation →</a>
   </div>
 </header>
@@ -357,22 +357,7 @@ body { font-family: 'DM Sans', -apple-system, system-ui, sans-serif; -webkit-fon
         <li><span class="mast">vii.</span><span>Executive Education</span></li>
       </ol>
     </div>
-    <div class="frame">
-      <div class="mast mast--green">— Currently advising on</div>
-      <div>
-        <span class="tag">Governance</span>
-        <span class="tag">Digital infrastructures</span>
-        <span class="tag">Transformation</span>
-        <span class="tag">Sustainability</span>
-        <span class="tag">Tokenization · RWA</span>
-        <span class="tag">AI Governance</span>
-      </div>
-      <div>
-        <span class="mast">Accepting mandates</span>
-        <span><span></span> Available</span>
-      </div>
     </div>
-  </div>
 </section>
 
 <!-- MARQUEE -->
@@ -683,5 +668,195 @@ body { font-family: 'DM Sans', -apple-system, system-ui, sans-serif; -webkit-fon
 
 </div>
 
+
+<script>
+(function(){
+const T={
+'page-title':'AZLYC — Estudio de gobernanza estratégica y transformación de sistemas',
+'nav':['Enfoque','Manifiesto','Ámbitos','Práctica','Contacto'],
+'nav-cta':'Iniciar una conversación →',
+'strip-left':'AZLYC · Gobernanza estratégica',
+'htags':['Gobernanza','Infraestructuras digitales','Transformación','Sostenibilidad','Est. 2017'],
+'h-secnum':'01 — Práctica',
+'h1':'The operating system<br/>of <span class="ital">instituciones</span><br/>está <span class="ital-orange">cambiando.</span>',
+'h-lede':'AZLYC es un estudio de gobernanza estratégica y transformación de sistemas. Trabajamos donde las categorías institucionales ya no responden a las preguntas que enfrentan los consejos de administración, los fundadores y las instituciones — y donde las respuestas tienen consecuencias institucionales.',
+'hcta':['Explorar ámbitos →','Iniciar una conversación'],
+'marquee':['Las instituciones mejor gobernadas hacen el mundo más navegable.','Tokenización · ARR','Gobernanza de DAOs','Gobernanza de IA','CSRD / ESRS','Sandboxes regulatorios','Consejos e instituciones'],
+'s0-mast':'02 · Enfoque',
+'s0-h2':'Cuando las categorías existentes ya no <span class="ital">responden.</span>',
+'s0-p':'Las instituciones operan más allá de los límites de las categorías organizativas tradicionales. AZLYC nació alrededor de esa observación — un estudio para el trabajo de gobernanza, sistemas y transformación donde la pregunta aún no está ordenada por disciplina, y donde la respuesta tiene consecuencias institucionales.',
+'s0-cards':[
+  ['i.','La pregunta','Aún no ordenada por disciplina — donde consejos, fundadores e instituciones afrontan decisiones que no encajan en categorías establecidas.'],
+  ['ii.','El trabajo','Se sitúa antes que el asesoramiento legal, la consultoría técnica o los programas de transformación medidos por diapositivas.'],
+  ['iii.','La convicción','Las instituciones mejor gobernadas hacen el mundo más navegable. Esa es la convicción desde la que opera el estudio.']
+],
+'sw-mast':'Manifiesto',
+'sw-h2':'Por qué este trabajo <span class="ital">importa.</span>',
+'sw-ps':[
+  'Las instituciones operan bajo presiones que no existían hace una generación. Los activos digitales y la tokenización están redibujando cómo se coordina, posee y gobierna el valor — no en los márgenes, sino en el centro. La sostenibilidad ha dejado de ser un ejercicio de reporte para convertirse en un plan estratégico para no caer en crisis. La inteligencia artificial se adopta más rápido de lo que las instituciones pueden escribir las normas. La regulación llega en oleadas — MiCA, la Ley de IA de la UE, CSRD, DLT — y cada una redibuja lo que significa el cumplimiento antes de que la anterior haya sido asimilada. La ética ha pasado de la retórica a la restricción operativa.',
+  'Bajo todo esto, una pregunta más antigua sobrevive: para qué sirve una institución, y qué hace falta para construir una que perdure.',
+  'AZLYC nació con la convicción de que esta pregunta merece más de lo que el mercado ofrece actualmente. No asesoramiento legal. No consultoría técnica. No programas de transformación facturados por diapositiva. El trabajo se sitúa antes que todo eso — en la pregunta de cómo un consejo, un fundador o una institución sostiene su estructura, su tecnología y su cultura bajo presiones para las que ninguno fue diseñado. Con integridad. De una manera que sobreviva al liderazgo que lo inició.',
+  'Las instituciones mejor gobernadas hacen el mundo más navegable. Esa es la convicción desde la que opera el estudio.'
+],
+'s1-mast':'03 · Ámbitos',
+'s1-h2':'Siete campos de <span class="ital">práctica.</span>',
+'s1-intro':'Configurados por encargo, organizados como sistema.',
+'domains':[
+  ['i.','Gobernanza y Arquitectura Institucional','Modelos de gobernanza, arquitectura del consejo, derechos de decisión y marcos de rendición de cuentas para organizaciones cuya estructura ya no responde a su entorno.'],
+  ['ii.','Infraestructuras Digitales y Tokenizadas','Marcos de tokenización, estructuración de activos digitales y la arquitectura institucional que permite que el valor regulado y no regulado coexistan.'],
+  ['iii.','Transformación Organizativa','Transición cultural, alineamiento del liderazgo, sistemas operativos basados en valores y el trabajo cultural que convierte el cambio regulatorio en cambio institucional duradero.'],
+  ['iv.','Gobernanza Responsable e IA','Gobernanza de IA, marcos éticos y arquitectura de riesgos para instituciones que adoptan IA en entornos regulados — diseñados para sobrevivir al primer ciclo regulatorio.'],
+  ['v.','Asesoría Estratégica y Entornos Complejos','Asesoría estratégica senior en entornos multilaterales, multijurisdiccionales y de alto riesgo — donde la pregunta es institucional, la superficie es amplia y la implementación es irreversible.'],
+  ['vi.','Sostenibilidad e Impacto','La sostenibilidad se convierte en infraestructura institucional — integrada en la gobernanza, los derechos de decisión y los modelos operativos, donde el ciclo de reporting ya no es lo que define la práctica.'],
+  ['vii.','Formación Ejecutiva','Sesiones cerradas para consejos, ejecutivos y organismos reguladores — diseñadas como herramientas operativas, no como contenido de conferencia. Gobernanza, tecnología y transformación enseñadas como un sistema.']
+],
+'s2-mast':'— Tokenización y Madurez Blockchain',
+'s2-h2':'Activos del mundo real, <span class="ital">infraestructura institucional.</span>',
+'s2-ps':[
+  'Tokenización de activos del mundo real — deuda, acciones, inmuebles, fondos — como infraestructura institucional, no como experimento. Trabajamos antes del contrato inteligente: arquitectura del emisor, diseño de custodia, protección del inversor, interfaz con el regulador y la postura jurisdiccional que permite que la estructura sobreviva al próximo ciclo regulatorio.',
+  'AZLYC estructuró el primer piloto de tokenización de deuda que completó el sandbox regulatorio de la CNMV española (2021–22). Mandatos activos en Europa y el Cáucaso bajo MiCA, el sandbox de valores digitales de la FCA y los marcos del Banco Nacional de Georgia.',
+  'AZLYC también opera evaluaciones BMM (Blockchain Maturity Model) como Business Associate autorizado por BMM (BBA) de la Government Blockchain Association (GBA). Evaluador principal: líder del capítulo español de la GBA — evaluador BMM certificado.'
+],
+'s2-tags':['Tokenización ARR','Gobernanza de DAOs','MiCA y CASP','Sandbox CNMV','DSS FCA','Banco Nacional de Georgia','Evaluador BMM (GBA)','Diseño de custodia','Arquitectura del emisor'],
+'s2-stats':[['2017','Establecido'],['3','Continentes · ES · IT · GE · CA'],['CNMV','Primer sandbox de tokenización de deuda'],['GBA','Evaluador BMM · Capítulo España']],
+'s4-mast':'04 · Práctica',
+'s4-h2':'Mandatos <span class="ital">seleccionados.</span>',
+'s4-p':'Tres mandatos representativos — anonimizados, parafraseados, condensados. Referencias disponibles bajo solicitud y NDA. AZLYC no publica listas de clientes, logotipos ni estudios de caso.',
+'engagements':[
+  ['01','2025–26','— Georgia · Activos digitales · Integrado','Plataforma institucional de activos digitales','Estructuración y licenciamiento de activos digitales para una plataforma institucional bajo el marco del Banco Nacional de Georgia — gobernanza, arquitectura de custodia, interfaz regulatoria y postura operativa transfronteriza.',['Activos digitales','Banco Nacional de Georgia','Transfronterizo']],
+  ['02','2022–23','— Italia · Estrategia ESG · Asesoría estratégica','Transición CSRD para un grupo farmacéutico','Estrategia de sostenibilidad y arquitectura de gobernanza ESG para un grupo farmacéutico italiano que navega la transición del reporting voluntario a las obligaciones obligatorias alineadas con CSRD.',['CSRD','Gobernanza ESG','Farmacia']],
+  ['03','2019–22','— Centroamérica · Transformación cultural','Rediseño de ethos y gobernanza en una universidad privada','Rediseño de ethos y gobernanza para una universidad privada en Centroamérica — alineamiento del liderazgo, arquitectura de valores y el trabajo cultural que convirtió una transición regulatoria en cambio institucional duradero.',['Transformación cultural','Educación superior','Arquitectura de valores']]
+],
+'enquire':'Consultar →',
+'s6-mast':'— Contacto',
+'s6-h2':'Iniciemos una <span class="ital">conversación.</span>',
+'s6-p':'Selectivo y discreto. Un asesor sénior responderá en dos días hábiles.',
+'s6-lbls':['Directo','Horario','Entidad','Establecido'],
+'s6-vals':['Lun — Vie, con cita previa','AZLYC BV · Países Bajos · Est. 2017','2017'],
+'form':['Nombre','Correo electrónico','Mensaje','Enviar →'],
+'ft-tag':'Estudio de gobernanza estratégica y transformación de sistemas.',
+'ft-copy':'© 2026 AZLYC BV — Multidisciplinar por diseño.',
+'ft-links':['Enfoque','Ámbitos','Práctica']
+};
+
+let cur='en';
+function s(sel){return document.querySelector(sel)}
+function sa(sel){return Array.from(document.querySelectorAll(sel))}
+
+function applyES(){
+  document.documentElement.lang='es';
+  document.title=T['page-title'];
+  const dm=s('meta[name="description"]');if(dm)dm.content='AZLYC es un estudio de gobernanza estratégica y transformación de sistemas que opera en la intersección de instituciones, tecnología y entornos complejos.';
+  // Nav
+  sa('nav.top ul a').forEach((a,i)=>{if(T.nav[i])a.innerHTML=T.nav[i];});
+  const cta=s('nav.top .cta');if(cta)cta.innerHTML=T['nav-cta'];
+  // Strip
+  const strips=sa('.header-strip > span');if(strips[0])strips[0].innerHTML=T['strip-left'];
+  // Hero tags
+  sa('.hero .pre-tags span').forEach((el,i)=>{if(T.htags[i])el.innerHTML=T.htags[i];});
+  const sn=s('.hero .sec-num');if(sn)sn.innerHTML='<b>01</b> — Práctica';
+  const h1=s('.hero h1');if(h1)h1.innerHTML=T['h1'];
+  const lede=s('.hero-foot .lede');if(lede)lede.innerHTML=T['h-lede'];
+  sa('.hero-foot .ctas a').forEach((a,i)=>{if(T.hcta[i])a.innerHTML=T.hcta[i];});
+  // Marquee — only text items (no .star)
+  let mi=0;sa('.marquee-item').forEach(el=>{if(!el.querySelector('.star')&&T.marquee[mi]){el.innerHTML=T.marquee[mi];mi++;}});
+  // Sec-0
+  const s0=s('#sec-0');if(!s0)return;
+  const s0mast=s0.querySelector('.mast--green');if(s0mast)s0mast.innerHTML=T['s0-mast'];
+  const s0h2=s0.querySelector('h2');if(s0h2)s0h2.innerHTML=T['s0-h2'];
+  const s0p=s0.querySelector('div > div:last-child p');if(s0p)s0p.innerHTML=T['s0-p'];
+  sa('#sec-0 .frame').forEach((c,i)=>{
+    if(!T['s0-cards'][i])return;
+    const [n,h,p]=T['s0-cards'][i];
+    const d=c.querySelector('div.ser');if(d)d.innerHTML=n;
+    const h3=c.querySelector('h3');if(h3)h3.innerHTML=h;
+    const cp=c.querySelector('p');if(cp)cp.innerHTML=p;
+  });
+  // Sec-why
+  const sw=s('#sec-why');if(!sw)return;
+  const swm=sw.querySelector('.mast--green');if(swm)swm.innerHTML=T['sw-mast'];
+  const swh2=sw.querySelector('h2');if(swh2)swh2.innerHTML=T['sw-h2'];
+  const swps=sa('#sec-why .sec-body p, #sec-why p');
+  let pi=0;swps.forEach(p=>{if(T['sw-ps'][pi])p.innerHTML=T['sw-ps'][pi++];});
+  // Sec-1
+  const s1=s('#sec-1');if(!s1)return;
+  const s1m=s1.querySelector('.mast--green');if(s1m)s1m.innerHTML=T['s1-mast'];
+  const s1h2=s1.querySelector('h2');if(s1h2)s1h2.innerHTML=T['s1-h2'];
+  const s1i=s1.querySelector('.domains-intro');if(s1i)s1i.innerHTML=T['s1-intro'];
+  sa('#sec-1 .service-block').forEach((d,i)=>{
+    if(!T.domains[i])return;
+    const [n,cat,p]=T.domains[i];
+    const num=d.querySelector('.num');if(num)num.innerHTML=n;
+    const h3=d.querySelector('h3');if(h3)h3.innerHTML=cat;
+    const dp=d.querySelector('p');if(dp)dp.innerHTML=p;
+  });
+  // Sec-2
+  const s2=s('#sec-2');if(!s2)return;
+  const s2m=s2.querySelector('div:first-child .mast');if(s2m)s2m.innerHTML=T['s2-mast'];
+  const s2h2=s2.querySelector('div:first-child h2');if(s2h2)s2h2.innerHTML=T['s2-h2'];
+  sa('#sec-2 p').forEach((p,i)=>{if(T['s2-ps'][i])p.innerHTML=T['s2-ps'][i];});
+  sa('#sec-2 .tag').forEach((t,i)=>{if(T['s2-tags'][i])t.innerHTML=T['s2-tags'][i];});
+  sa('#sec-2 > div:nth-child(3) > div').forEach((d,i)=>{
+    if(!T['s2-stats'][i])return;
+    const ser=d.querySelector('.ser');if(ser)ser.innerHTML=T['s2-stats'][i][0];
+    const mast=d.querySelector('.mast');if(mast)mast.innerHTML=T['s2-stats'][i][1];
+  });
+  // Sec-4
+  const s4=s('#sec-4');if(!s4)return;
+  const s4m=s4.querySelector('.mast--green');if(s4m)s4m.innerHTML=T['s4-mast'];
+  const s4h2=s4.querySelector('h2');if(s4h2)s4h2.innerHTML=T['s4-h2'];
+  const s4p=s4.querySelector('.sec-body p, div > p');if(s4p)s4p.innerHTML=T['s4-p'];
+  sa('#sec-4 article').forEach((art,i)=>{
+    if(!T.engagements[i])return;
+    const [n,y,sec,h,p,tags]=T.engagements[i];
+    const ser=art.querySelector('.ser');if(ser)ser.innerHTML=n;
+    const mast=art.querySelector('.mast:not(.mast--green)');if(mast)mast.innerHTML=y;
+    const mg=art.querySelector('.mast--green');if(mg)mg.innerHTML=sec;
+    const h3=art.querySelector('h3');if(h3)h3.innerHTML=h;
+    const ap=art.querySelector('p');if(ap)ap.innerHTML=p;
+    art.querySelectorAll('.tag').forEach((t,j)=>{if(tags[j])t.innerHTML=tags[j];});
+    const btn=art.querySelector('.btn--ghost');if(btn)btn.innerHTML=T.enquire;
+  });
+  // Sec-6
+  const s6=s('#sec-6');if(!s6)return;
+  const s6m=s6.querySelector('.mast--green');if(s6m)s6m.innerHTML=T['s6-mast'];
+  const s6h2=s6.querySelector('h2');if(s6h2)s6h2.innerHTML=T['s6-h2'];
+  const s6p=s6.querySelector('p');if(s6p)s6p.innerHTML=T['s6-p'];
+  sa('#sec-6 .ci-block .lbl').forEach((l,i)=>{if(T['s6-lbls'][i])l.innerHTML=T['s6-lbls'][i];});
+  const offices=sa('#sec-6 .office, #sec-6 .val');
+  offices.forEach((el,i)=>{if(T['s6-vals'][i])el.innerHTML=T['s6-vals'][i];});
+  sa('#sec-6 form .lbl').forEach((l,i)=>{if(T.form[i])l.innerHTML=T.form[i];});
+  const sub=s('#sec-6 button[type="submit"]');if(sub)sub.innerHTML=T.form[3];
+  // Footer
+  const ftag=s('footer .tagline');if(ftag)ftag.innerHTML=T['ft-tag'];
+  const fcopy=sa('footer .legal span');if(fcopy[0])fcopy[0].innerHTML=T['ft-copy'];
+  sa('footer ul a').forEach((a,i)=>{if(T['ft-links'][i])a.innerHTML=T['ft-links'][i];});
+}
+
+function applyEN(){
+  location.reload();
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  sa('.lang button').forEach(btn=>{
+    btn.addEventListener('click',function(){
+      const lang=this.dataset.lang;
+      if(lang===cur)return;
+      cur=lang;
+      sa('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
+      if(lang==='es')applyES();
+      else applyEN();
+    });
+  });
+  const saved=sessionStorage.getItem('azlyc-lang');
+  if(saved==='es'){
+    cur='es';
+    sa('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang==='es'));
+    applyES();
+  }
+});
+window.addEventListener('beforeunload',()=>sessionStorage.setItem('azlyc-lang',cur));
+})();
+</script>
 </body>
 </html>
