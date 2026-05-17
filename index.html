@@ -331,7 +331,6 @@ body { font-family: 'DM Sans', -apple-system, system-ui, sans-serif; -webkit-fon
 <section>
   <div>
     <div class="mast">A strategic governance studio · Est. 2017</div>
-    <div class="mast">AZLYC BV · Netherlands</div>
   </div>
   <div>
     <h1>The operating system<br/>of <span class="ital">institutions</span><br/>is <span class="ital-orange">changing.</span></h1>
@@ -764,7 +763,7 @@ function applyES(){
   const s0=s('#sec-0');if(!s0)return;
   const s0mast=s0.querySelector('.mast--green');if(s0mast)s0mast.innerHTML=T['s0-mast'];
   const s0h2=s0.querySelector('h2');if(s0h2)s0h2.innerHTML=T['s0-h2'];
-  const s0p=s0.querySelector('div > div:last-child p');if(s0p)s0p.innerHTML=T['s0-p'];
+  const s0p=s0.querySelector('div:first-child > div:last-child p');if(s0p)s0p.innerHTML=T['s0-p'];
   sa('#sec-0 .frame').forEach((c,i)=>{
     if(!T['s0-cards'][i])return;
     const [n,h,p]=T['s0-cards'][i];
