@@ -752,11 +752,14 @@ function applyES(){
   // Strip
   const strips=sa('.header-strip > span');if(strips[0])strips[0].innerHTML=T['strip-left'];
   // Hero tags
-  sa('.hero .pre-tags span').forEach((el,i)=>{if(T.htags[i])el.innerHTML=T.htags[i];});
-  const sn=s('.hero .sec-num');if(sn)sn.innerHTML='<b>01</b> — Práctica';
-  const h1=s('.hero h1');if(h1)h1.innerHTML=T['h1'];
-  const lede=s('.hero-foot .lede');if(lede)lede.innerHTML=T['h-lede'];
-  sa('.hero-foot .ctas a').forEach((a,i)=>{if(T.hcta[i])a.innerHTML=T.hcta[i];});
+  const heroSec=document.querySelector('.dirC > section:first-of-type');
+  if(heroSec){
+    heroSec.querySelectorAll('.pre-tags span').forEach((el,i)=>{if(T.htags[i])el.innerHTML=T.htags[i];});
+    const sn=heroSec.querySelector('.sec-num');if(sn)sn.innerHTML='<b>01</b> — Práctica';
+    const h1=heroSec.querySelector('h1');if(h1)h1.innerHTML=T['h1'];
+    const lede=heroSec.querySelector('.lede');if(lede)lede.innerHTML=T['h-lede'];
+    heroSec.querySelectorAll('a.btn').forEach((a,i)=>{if(T.hcta[i])a.innerHTML=T.hcta[i];});
+  }
   // Marquee — only text items (no .star)
   let mi=0;sa('.marquee-item').forEach(el=>{if(!el.querySelector('.star')&&T.marquee[mi]){el.innerHTML=T.marquee[mi];mi++;}});
   // Sec-0
