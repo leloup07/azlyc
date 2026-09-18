@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AZLYC — Strategic governance and systems transformation studio</title>
+<meta name="description" content="AZLYC is a strategic governance and systems transformation studio: board architecture, digital assets and tokenization, AI governance and sustainability as institutional infrastructure.">
+<link rel="canonical" href="https://azlyc.com/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<style>
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CSS LITERAL del export C · Statement (sin cambios)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.dirC {
+  --bg: #ede8db;
+  --paper: #e3dcc8;
+  --ink: #161410;
+  --ink-2: rgba(22,20,16,0.65);
+  --ink-3: rgba(22,20,16,0.4);
+  --rule: rgba(22,20,16,0.16);
+  --green: #1f3d2b;
+  --green-2: #2e5a3f;
+  --green-soft: #c5d4bf;
+  --orange: #b85c38;
+  font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
+  font-feature-settings: 'ss01', 'kern';
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 15px;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+.dirC .ser { font-family: 'Instrument Serif', 'Source Serif Pro', Georgia, serif; font-weight: 400; }
+.dirC .ital { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; }
+.dirC .mast {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-2); font-weight: 500;
+}
+.dirC .mast--green { color: var(--green); }
+.dirC h1, .dirC h2, .dirC h3 { margin: 0; letter-spacing: -0.025em; font-weight: 400; }
+.dirC a { color: inherit; text-decoration: none; }
+.dirC .btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 16px 28px; font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 500; letter-spacing: 0.02em;
+  background: var(--ink); color: var(--bg); border: 1px solid var(--ink);
+  border-radius: 999px; cursor: pointer; transition: all .25s;
+}
+.dirC .btn:hover { background: var(--green); border-color: var(--green); transform: translateY(-1px); }
+.dirC .btn--ghost { background: transparent; color: var(--ink); }
+.dirC .btn--ghost:hover { background: var(--ink); color: var(--bg); }
+.dirC .btn--green { background: var(--green); border-color: var(--green); }
+.dirC .placeholder-warm { background-image: repeating-linear-gradient(135deg, rgba(22,20,16,0.07) 0 1px, transparent 1px 14px), linear-gradient(180deg, #c9b78d, #a39067); }
+.dirC .placeholder-cool { background-image: repeating-linear-gradient(135deg, rgba(22,20,16,0.07) 0 1px, transparent 1px 14px), linear-gradient(180deg, #b9c2ad, #7d8a73); }
+.dirC .lang { display: inline-flex; background: rgba(22,20,16,0.06); padding: 4px; border-radius: 999px; }
+.dirC .lang button { background: transparent; border: 0; padding: 6px 14px; font-family: 'DM Sans'; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; cursor: pointer; color: var(--ink-2); border-radius: 999px; }
+.dirC .lang button.on { background: var(--ink); color: var(--bg); }
+.dirC .tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border: 1px solid var(--rule); border-radius: 999px;
+  font-size: 12px; color: var(--ink-2); background: rgba(255,255,255,0.4);
+}
+.dirC .tag--green { background: var(--green); color: var(--bg); border-color: var(--green); }
+.dirC .marquee-band { background: var(--green); color: var(--bg); padding: 22px 0; overflow: hidden; white-space: nowrap; }
+.dirC .marquee-track { display: inline-flex; gap: 80px; align-items: center; animation: dirC-marquee 40s linear infinite; }
+@keyframes dirC-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.dirC .marquee-item { display: inline-flex; gap: 24px; align-items: center; font-family: 'Instrument Serif'; font-size: 48px; letter-spacing: -0.02em; font-weight: 400; }
+.dirC .marquee-item .star { display:inline-block; width: 18px; height: 18px; transform: rotate(45deg); background: var(--green-soft); }
+.dirC .service-block { padding: 48px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background .3s; position: relative; }
+.dirC .service-block:hover { background: var(--green); color: var(--bg); }
+.dirC .service-block:hover .mast { color: rgba(237,232,219,0.7) !important; }
+.dirC .service-block:hover .num { color: var(--green-soft); }
+.dirC .service-block .arrow-c { position: absolute; top: 32px; right: 32px; font-family: 'Instrument Serif'; font-size: 36px; line-height: 1; transition: transform .3s; opacity: 0.4; }
+.dirC .service-block:hover .arrow-c { transform: translate(8px, -8px); opacity: 1; color: var(--green-soft); }
+.dirC .num { font-family: 'Instrument Serif'; font-size: 80px; line-height: 1; letter-spacing: -0.04em; color: var(--green); transition: color .3s; }
+.dirC .frame { border: 1px solid var(--rule); background: rgba(255,255,255,0.4); }
+.dirC input, .dirC select, .dirC textarea {
+  width: 100%; background: rgba(255,255,255,0.5); border: 1px solid var(--rule);
+  padding: 14px 16px; font: inherit; font-family: inherit; font-size: 15px;
+  color: var(--ink); outline: none; border-radius: 8px; transition: all .2s;
+}
+.dirC input:focus, .dirC select:focus, .dirC textarea:focus { border-color: var(--green); background: rgba(255,255,255,0.9); }
+.dirC .lbl { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-2); font-weight: 500; margin-bottom: 6px; display: block; }
+.dirC .lift { transition: transform .3s; }
+.dirC .lift:hover { transform: translateY(-4px); }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Layout (reset + grid) — minimum scaffolding around the CSS above
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #ede8db; }
+body { font-family: 'DM Sans', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.dirC ::selection { background: var(--green); color: var(--bg); }
+
+.dirC .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+
+/* Header / nav */
+.dirC > header {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 22px clamp(20px, 4vw, 48px);
+  border-bottom: 1px solid var(--rule);
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(237,232,219,0.92); backdrop-filter: blur(14px);
+}
+.dirC > header > div:first-child { font-size: 22px; }
+.dirC > header > nav { display: flex; gap: 28px; }
+.dirC > header > nav a { font-size: 13px; letter-spacing: 0.04em; color: var(--ink-2); }
+.dirC > header > nav a:hover { color: var(--green); }
+.dirC > header > div:last-child { display: flex; align-items: center; gap: 16px; }
+@media (max-width: 920px) { .dirC > header > nav { display: none; } }
+
+/* Hero section */
+.dirC > section:first-of-type {
+  padding: clamp(40px, 6vw, 72px) clamp(20px, 4vw, 48px) clamp(60px, 8vw, 100px);
+  border-bottom: 1px solid var(--rule);
+}
+.dirC > section:first-of-type > div:first-child {
+  display: flex; justify-content: space-between; gap: 24px;
+  border-bottom: 1px solid var(--rule); padding-bottom: 18px; margin-bottom: clamp(40px, 6vw, 80px);
+}
+.dirC > section:first-of-type h1 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(56px, 10vw, 160px); line-height: 0.95; font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+.dirC > section:first-of-type h1 .ital { color: var(--green); }
+.dirC > section:first-of-type h1 .ital-orange { color: var(--orange); font-family: 'Instrument Serif'; font-style: italic; }
+.dirC > section:first-of-type h1 .placeholder-cool {
+  display: inline-block; width: clamp(120px, 16vw, 220px); height: clamp(50px, 7vw, 90px);
+  vertical-align: middle; margin: 0 12px;
+}
+.dirC > section:first-of-type > div:last-child {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: clamp(24px, 3vw, 48px);
+}
+.dirC > section:first-of-type > div:last-child > div > .mast { display: block; margin-bottom: 16px; }
+.dirC > section:first-of-type > div:last-child p { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin-bottom: 24px; }
+.dirC > section:first-of-type > div:last-child > div:nth-child(1) > div:last-child { display: flex; gap: 12px; flex-wrap: wrap; }
+.dirC > section:first-of-type > div:last-child ol {
+  list-style: none; display: flex; flex-direction: column; gap: 12px;
+}
+.dirC > section:first-of-type > div:last-child ol li { display: flex; gap: 16px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+.dirC > section:first-of-type > div:last-child ol li > span:last-child { font-size: 15px; color: var(--ink); }
+.dirC > section:first-of-type > div:last-child .frame { padding: 24px; border-radius: 8px; }
+.dirC > section:first-of-type > div:last-child .frame > .mast:first-child { display: block; margin-bottom: 16px; }
+.dirC > section:first-of-type > div:last-child .frame > div { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+.dirC > section:first-of-type > div:last-child .frame > div:last-child {
+  display: flex; justify-content: space-between; align-items: center; padding-top: 12px;
+  border-top: 1px solid var(--rule); margin-bottom: 0;
+}
+.dirC > section:first-of-type > div:last-child .frame > div:last-child > span:last-child > span:first-child {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px;
+}
+@media (max-width: 920px) {
+  .dirC > section:first-of-type > div:last-child { grid-template-columns: 1fr; }
+}
+
+/* Marquee (estructura especial) */
+
+/* Common sections */
+.dirC section {
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 48px);
+  border-bottom: 1px solid var(--rule);
+}
+.dirC section > div:first-child {
+  display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(24px, 4vw, 64px);
+  margin-bottom: clamp(40px, 5vw, 64px); align-items: start;
+}
+.dirC section > div:first-child > div:first-child .mast { display: block; margin-bottom: 16px; }
+.dirC section > div:first-child h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(36px, 5.5vw, 80px); line-height: 1; font-weight: 400;
+}
+.dirC section > div:first-child > div:last-child p {
+  font-size: 17px; line-height: 1.65; color: var(--ink-2);
+}
+.dirC section > div:first-child > div:last-child p + p { margin-top: 14px; }
+@media (max-width: 920px) {
+  .dirC section > div:first-child { grid-template-columns: 1fr; }
+}
+
+/* Section sec-0 (mission cards 3) */
+.dirC #sec-0 > div:last-child {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.dirC #sec-0 > div:last-child .frame {
+  padding: 32px; display: flex; flex-direction: column; gap: 14px; min-height: 280px;
+}
+.dirC #sec-0 > div:last-child .frame > div:first-child { font-size: 48px; line-height: 1; color: var(--green); }
+.dirC #sec-0 > div:last-child .frame h3 { font-size: 24px; line-height: 1.15; }
+.dirC #sec-0 > div:last-child .frame p { font-size: 14px; line-height: 1.55; color: var(--ink-2); flex-grow: 1; }
+@media (max-width: 920px) { .dirC #sec-0 > div:last-child { grid-template-columns: 1fr; } }
+
+/* Section sec-1 (service-blocks grid) — used for the 7 fields of practice */
+.dirC #sec-1 > div:nth-child(2) {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule); border-left: 1px solid var(--rule);
+}
+.dirC #sec-1 .service-block { display: flex; flex-direction: column; gap: 16px; min-height: 340px; cursor: pointer; }
+.dirC #sec-1 .service-block h3 { font-size: 22px; line-height: 1.2; margin-top: 8px; }
+.dirC #sec-1 .service-block p { font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.dirC #sec-1 .service-block:hover p { color: rgba(237,232,219,0.85); }
+@media (max-width: 920px) { .dirC #sec-1 > div:nth-child(2) { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) and (min-width: 921px) { .dirC #sec-1 > div:nth-child(2) { grid-template-columns: repeat(2, 1fr); } }
+
+/* Section sec-2 (practice + tags + stats) */
+.dirC #sec-2 > div:nth-child(2) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 4vw, 64px);
+  margin-top: 32px;
+}
+.dirC #sec-2 > div:nth-child(2) > div:first-child { display: flex; flex-direction: column; gap: 20px; }
+.dirC #sec-2 > div:nth-child(2) > div:first-child > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.dirC #sec-2 > div:nth-child(3) {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule);
+}
+.dirC #sec-2 > div:nth-child(3) > div .ser { font-size: 56px; line-height: 1; color: var(--green); }
+.dirC #sec-2 > div:nth-child(3) > div .mast { display: block; margin-top: 8px; }
+@media (max-width: 920px) {
+  .dirC #sec-2 > div:nth-child(2) { grid-template-columns: 1fr; }
+  .dirC #sec-2 > div:nth-child(3) { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Section sec-2 special heading (no two-col head) */
+.dirC #sec-2 > div:first-child {
+  display: block; grid-template-columns: none; margin-bottom: 0;
+}
+.dirC #sec-2 > div:first-child .mast { display: block; margin-bottom: 16px; }
+.dirC #sec-2 > div:first-child h2 { margin-bottom: 24px; }
+
+/* Section sec-3 (founder) */
+.dirC #sec-3 { padding-top: 0; }
+.dirC #sec-3 > .mast { display: block; padding-top: clamp(60px, 8vw, 100px); margin-bottom: 32px; }
+.dirC #sec-3 > div {
+  display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(32px, 4vw, 64px); align-items: start;
+}
+.dirC #sec-3 > div > div:first-child .placeholder-warm {
+  aspect-ratio: 1; border-radius: 8px; margin-bottom: 20px;
+}
+.dirC #sec-3 > div > div:first-child > div:last-child > .ser { font-size: 32px; }
+.dirC #sec-3 > div > div:first-child > div:last-child > .mast { display: block; margin-top: 4px; }
+.dirC #sec-3 > div > div:last-child blockquote {
+  border-left: 3px solid var(--green); padding-left: 24px; margin-bottom: 24px;
+}
+.dirC #sec-3 > div > div:last-child blockquote p.ser {
+  font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; color: var(--ink); margin-bottom: 12px;
+}
+.dirC #sec-3 > div > div:last-child p { font-size: 16px; line-height: 1.65; color: var(--ink-2); }
+@media (max-width: 920px) { .dirC #sec-3 > div { grid-template-columns: 1fr; } }
+
+/* Section sec-4 (cases) — used for engagements */
+.dirC #sec-4 > div:last-child {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.dirC #sec-4 > div:last-child article {
+  padding: 32px; display: flex; flex-direction: column; gap: 16px; border-radius: 8px;
+}
+.dirC #sec-4 > div:last-child article > div:nth-child(1) { display: flex; justify-content: space-between; align-items: baseline; }
+.dirC #sec-4 > div:last-child article > div:nth-child(1) > .ser { font-size: 28px; color: var(--green); }
+.dirC #sec-4 > div:last-child article > div:nth-child(2) { flex-grow: 1; }
+.dirC #sec-4 > div:last-child article > div:nth-child(2) > .mast { display: block; margin-bottom: 8px; }
+.dirC #sec-4 > div:last-child article > div:nth-child(2) h3 { font-size: 22px; line-height: 1.2; margin-bottom: 12px; }
+.dirC #sec-4 > div:last-child article > div:nth-child(2) p { font-size: 14px; line-height: 1.6; color: var(--ink-2); margin-bottom: 14px; }
+.dirC #sec-4 > div:last-child article > div:nth-child(2) > div:last-child { display: flex; flex-wrap: wrap; gap: 6px; }
+.dirC #sec-4 > div:last-child article > div:nth-child(3) {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: auto;
+}
+.dirC #sec-4 > div:last-child article > div:nth-child(3) > .placeholder-warm,
+.dirC #sec-4 > div:last-child article > div:nth-child(3) > .placeholder-cool { width: 100px; height: 60px; border-radius: 4px; }
+@media (max-width: 920px) { .dirC #sec-4 > div:last-child { grid-template-columns: 1fr; } }
+
+/* Section sec-6 (contact) */
+.dirC #sec-6 > .mast:first-child { display: block; margin-bottom: 12px; }
+.dirC #sec-6 > h2 { font-size: clamp(36px, 5vw, 64px); margin-bottom: 16px; }
+.dirC #sec-6 > p { font-size: 17px; color: var(--ink-2); margin-bottom: 40px; max-width: 720px; }
+.dirC #sec-6 > div {
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(32px, 5vw, 64px);
+}
+.dirC #sec-6 > div > div:first-child { display: flex; flex-direction: column; gap: 4px; }
+.dirC #sec-6 > div > div:first-child > .mast { display: block; margin-top: 20px; }
+.dirC #sec-6 > div > div:first-child > .ser { font-size: 20px; }
+.dirC #sec-6 form { display: flex; flex-direction: column; gap: 16px; }
+.dirC #sec-6 form > button { align-self: flex-start; margin-top: 8px; }
+@media (max-width: 920px) { .dirC #sec-6 > div { grid-template-columns: 1fr; } }
+
+/* Footer */
+.dirC > footer {
+  background: var(--ink); color: var(--bg);
+  padding: 48px clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 32px;
+}
+.dirC > footer > div:first-child { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
+.dirC > footer > div:first-child > .ser { font-size: 32px; color: var(--bg); }
+.dirC > footer > div:first-child .mast > div { color: rgba(237,232,219,0.5); margin-top: 4px; }
+.dirC > footer > div:last-child { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 24px; border-top: 1px solid rgba(237,232,219,0.16); flex-wrap: wrap; }
+.dirC > footer > div:last-child > .mast { color: rgba(237,232,219,0.5); }
+.dirC > footer > div:last-child > div { display: flex; gap: 16px 24px; flex-wrap: wrap; }
+.dirC > footer > div:last-child > div a { color: rgba(237,232,219,0.7); }
+.dirC > footer > div:last-child > div a:hover { color: var(--bg); }
+
+.dirC .logo { display: block; height: 72px; width: auto; }
+.dirC .logo--footer { height: 72px; border-radius: 6px; }
+@media (max-width: 920px) { .dirC .logo { height: 56px; } .dirC .logo--footer { height: 72px; } }
+
+
+/* ── Redesign additions ── */
+.dirC > section:first-of-type > div:last-child ol.proof li > span:first-child { flex: 0 0 96px; }
+.dirC > section:first-of-type > div:last-child ol.proof li > span:last-child { font-size: 14px; color: var(--ink-2); }
+.dirC #sec-1 .service-block .sub { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.dirC #sec-1 .service-block:hover .tag { border-color: rgba(237,232,219,0.35); color: rgba(237,232,219,0.85); background: transparent; }
+.dirC #sec-1 .service-block .eg { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.5; color: var(--ink-2); }
+.dirC #sec-1 .service-block .eg .mast { display: block; margin-bottom: 6px; font-size: 10px; }
+.dirC #sec-1 .service-block:hover .eg { border-color: rgba(237,232,219,0.25); color: rgba(237,232,219,0.85); }
+.dirC #sec-1 .service-block { min-height: 0; }
+.dirC #sec-1 > div.formats { display: flex; gap: 24px; align-items: baseline; flex-wrap: wrap; border: 0; padding-top: 24px; font-size: 14px; color: var(--ink-2); }
+.dirC #sec-6 > div > div:first-child .dim { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-3); }
+.dirC #sec-6 > div > div:first-child ol.next { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.dirC #sec-6 > div > div:first-child ol.next li { display: flex; gap: 14px; align-items: baseline; font-size: 14px; line-height: 1.5; color: var(--ink-2); padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+.dirC #sec-6 > div > div:last-child { display: flex; flex-direction: column; gap: 24px; }
+.dirC #sec-6 .alt { padding: 24px; border-radius: 8px; display: flex; flex-direction: column; gap: 12px; }
+.dirC #sec-6 .alt .mast { display: block; }
+.dirC #sec-6 .alt p { font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.dirC #sec-6 .alt .btn { align-self: flex-start; }
+@media (max-width: 920px) { .dirC > section:first-of-type > div:last-child ol.proof li > span:first-child { flex-basis: 80px; } }
+.dirC #sec-2 .bmm { padding: 32px; border-radius: 8px; display: flex; flex-direction: column; gap: 16px; align-self: start; }
+.dirC #sec-2 .bmm h3 { font-size: 28px; line-height: 1.15; }
+.dirC #sec-2 .bmm p { font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.dirC #sec-2 .bmm ol.next { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.dirC #sec-2 .bmm ol.next li { display: flex; gap: 14px; align-items: baseline; font-size: 14px; color: var(--ink-2); padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+.dirC #sec-2 .bmm .btn { align-self: flex-start; }
+</style>
+</head>
+<body>
+<div class="dirC" id="top">
+
+<header>
+  <div><a href="#top"><img src="data:image/jpeg;base64,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" alt="AZLYC" class="logo" /></a></div>
+  <nav>
+    <a href="#sec-0" data-i18n="nav.approach">Approach</a>
+    <a href="#sec-1" data-i18n="nav.domains">Domains</a>
+    <a href="#sec-4" data-i18n="nav.practice">Practice</a>
+    <a href="#sec-6" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div>
+    <div class="lang"><button class="on" data-lang="en">EN</button><button data-lang="es">ES</button></div>
+    <a href="#sec-6" class="btn" data-i18n="nav.cta">Begin a conversation →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section>
+  <div>
+    <div class="mast" data-i18n="hero.mast">A strategic governance studio · Est. 2017</div>
+  </div>
+  <div>
+    <h1 data-i18n="hero.h1">The operating system<br/>of <span class="ital">institutions</span><br/>is <span class="ital-orange">changing.</span></h1>
+  </div>
+  <div>
+    <div>
+      <div class="mast" data-i18n="hero.note">— A note from the firm</div>
+      <p data-i18n="hero.lede">AZLYC is a strategic governance and systems transformation studio. We work where the question facing a board, a founder or an institution is not yet sorted by discipline — and where the answer will have institutional consequences.</p>
+      <div>
+        <a href="#sec-1" class="btn btn--green" data-i18n="hero.cta1">Explore domains →</a>
+        <a href="#sec-6" class="btn btn--ghost" data-i18n="hero.cta2">Begin a conversation</a>
+      </div>
+    </div>
+    <div>
+      <div class="mast" data-i18n="hero.fields">— Three fields of practice</div>
+      <ol>
+        <li><span class="mast">i.</span><span data-i18n="d1.title">Governance &amp; Institutional Architecture</span></li>
+        <li><span class="mast">ii.</span><span data-i18n="d2.title">Digital, Tokenized &amp; AI Infrastructures</span></li>
+        <li><span class="mast">iii.</span><span data-i18n="d3.title">Transformation, Culture &amp; Sustainability</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="mast" data-i18n="hero.proof">— On the record</div>
+      <ol class="proof">
+        <li><span class="mast">CNMV</span><span data-i18n="proof.1">First debt-tokenization pilot to complete the Spanish regulatory sandbox, 2021–22</span></li>
+        <li><span class="mast">GBA</span><span data-i18n="proof.2">BMM-authorized Business Associate · Regional Director for Europe</span></li>
+        <li><span class="mast">DARA</span><span data-i18n="proof.3">Co-Chair, UK &amp; European Digital Asset Task Force</span></li>
+        <li><span class="mast" data-i18n="proof.4l">Mandates</span><span data-i18n="proof.4">Spain · Italy · Georgia · Central America</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span class="marquee-item" data-i18n="mq.1">Better-governed institutions make the world more navigable.</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.2">Tokenization · RWA</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.3">AI Governance · EU AI Act</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.4">MiCA &amp; CASP</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.5">CSRD / ESRS</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.6">CNMV &amp; FCA Sandboxes</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.7">Boards &amp; Institutions</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.1b">Better-governed institutions make the world more navigable.</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.2b">Tokenization · RWA</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.3b">AI Governance · EU AI Act</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.4b">MiCA &amp; CASP</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.5b">CSRD / ESRS</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.6b">CNMV &amp; FCA Sandboxes</span>
+    <span class="marquee-item"><span class="star"></span></span>
+    <span class="marquee-item" data-i18n="mq.7b">Boards &amp; Institutions</span>
+  </div>
+</div>
+
+<!-- SEC-0 · APPROACH (Approach + Manifesto merged) -->
+<section id="sec-0">
+  <div>
+    <div>
+      <div class="mast mast--green" data-i18n="s0.mast">01 · Approach</div>
+      <h2 class="ser" data-i18n="s0.h2">When existing categories no longer <span class="ital">hold.</span></h2>
+    </div>
+    <div>
+      <p data-i18n="s0.p1">Digital assets are redrawing how value is owned and governed. Artificial intelligence is being adopted faster than the rules can be written. Sustainability has become a strategic constraint rather than a reporting exercise. Regulation arrives in waves — MiCA, the EU AI Act, CSRD, DLT — and each one redraws what compliance means before the previous one is absorbed.</p>
+      <p data-i18n="s0.p2">Underneath all of this, an older question survives: what is an institution for, and what does it take to build one that endures. AZLYC was built around that question. The work sits earlier than legal advice or technical consulting — in how a board, a founder or an institution holds its structure, its technology and its culture together, with integrity, in a way that outlasts the leadership that began it.</p>
+    </div>
+  </div>
+  <div>
+    <div class="frame lift">
+      <div class="ser">i.</div>
+      <h3 class="ser" data-i18n="s0.c1h">The question</h3>
+      <p data-i18n="s0.c1p">Not yet sorted by discipline. A tokenization decision is also a governance decision; an AI deployment is also a question of board accountability.</p>
+    </div>
+    <div class="frame lift">
+      <div class="ser">ii.</div>
+      <h3 class="ser" data-i18n="s0.c2h">The work</h3>
+      <p data-i18n="s0.c2p">Architecture before implementation: decision rights, regulatory posture, custody, culture — designed as one system and handed over ready to operate.</p>
+    </div>
+    <div class="frame lift">
+      <div class="ser">iii.</div>
+      <h3 class="ser" data-i18n="s0.c3h">The conviction</h3>
+      <p data-i18n="s0.c3p">Better-governed institutions make the world more navigable. That is the conviction the studio operates from.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEC-1 · DOMAINS (3 fields, 7 former domains as sub-layers) -->
+<section id="sec-1">
+  <div>
+    <div>
+      <div class="mast mast--green" data-i18n="s1.mast">02 · Domains</div>
+      <h2 class="ser" data-i18n="s1.h2">Three fields of <span class="ital">practice.</span></h2>
+    </div>
+    <div class="mast" data-i18n="s1.intro">Configured per engagement, organized as a system.</div>
+  </div>
+  <div>
+    <div class="service-block">
+      <div class="num">i.</div>
+      <h3 class="ser" data-i18n="d1.title2">Governance &amp; Institutional Architecture</h3>
+      <p data-i18n="d1.p">Designing how decisions are made before they are made. Board architecture, decision rights and accountability frameworks for organizations whose structure no longer matches their environment — including senior counsel in multilateral and cross-jurisdictional situations that do not match the playbook.</p>
+      <div class="sub">
+        <span class="tag" data-i18n="d1.t1">Board architecture</span>
+        <span class="tag" data-i18n="d1.t2">Decision rights</span>
+        <span class="tag" data-i18n="d1.t3">Accountability frameworks</span>
+        <span class="tag" data-i18n="d1.t4">Strategic advisory</span>
+        <span class="tag" data-i18n="d1.t5">Complex environments</span>
+      </div>
+      <div class="eg"><span class="mast" data-i18n="eg.label">Typical mandate</span><span data-i18n="d1.eg">Redesign of decision rights and board oversight for an institution entering a regulated market.</span></div>
+    </div>
+    <div class="service-block">
+      <div class="num">ii.</div>
+      <h3 class="ser" data-i18n="d2.title2">Digital, Tokenized &amp; AI Infrastructures</h3>
+      <p data-i18n="d2.p">Coordination layers for assets and technologies whose rules are still being written. Tokenization and digital-asset structuring under MiCA, CNMV and FCA frameworks; AI governance and EU AI Act readiness for institutions adopting AI inside regulated environments; Blockchain Maturity Model assessments.</p>
+      <div class="sub">
+        <span class="tag" data-i18n="d2.t1">Tokenization · RWA</span>
+        <span class="tag" data-i18n="d2.t2">MiCA &amp; CASP</span>
+        <span class="tag" data-i18n="d2.t3">DAO governance</span>
+        <span class="tag" data-i18n="d2.t4">AI governance</span>
+        <span class="tag" data-i18n="d2.t5">EU AI Act</span>
+        <span class="tag" data-i18n="d2.t6">BMM assessment</span>
+      </div>
+      <div class="eg"><span class="mast" data-i18n="eg.label2">Typical mandate</span><span data-i18n="d2.eg">Issuer architecture, custody design and regulator interface for a tokenized debt issuance — or an AI governance framework for a regulated institution.</span></div>
+    </div>
+    <div class="service-block">
+      <div class="num">iii.</div>
+      <h3 class="ser" data-i18n="d3.title2">Transformation, Culture &amp; Sustainability</h3>
+      <p data-i18n="d3.p">Change that survives the leadership that initiated it. Cultural transition, leadership alignment, values-based operating systems and sustainability embedded as institutional infrastructure — in governance, decision rights and operating models rather than in the reporting cycle.</p>
+      <div class="sub">
+        <span class="tag" data-i18n="d3.t1">Cultural transition</span>
+        <span class="tag" data-i18n="d3.t2">Leadership alignment</span>
+        <span class="tag" data-i18n="d3.t3">Values architecture</span>
+        <span class="tag" data-i18n="d3.t4">CSRD / ESRS</span>
+        <span class="tag" data-i18n="d3.t5">ESG governance</span>
+      </div>
+      <div class="eg"><span class="mast" data-i18n="eg.label3">Typical mandate</span><span data-i18n="d3.eg">Sustainability strategy and ESG governance for a group moving from voluntary to mandatory reporting.</span></div>
+    </div>
+  </div>
+  <div class="formats">
+    <span class="mast" data-i18n="fmt.label">Delivered as</span>
+    <span data-i18n="fmt.list">Strategic advisory · Embedded mandates · BMM assessments · Closed sessions for boards and policy bodies</span>
+  </div>
+</section>
+
+<!-- SEC-2 · TOKENIZATION & BMM -->
+<section id="sec-2">
+  <div>
+    <div class="mast" data-i18n="s2.mast">— Tokenization &amp; Blockchain Maturity</div>
+    <h2 class="ser" data-i18n="s2.h2">Real-world assets, <span class="ital">institutional infrastructure.</span></h2>
+  </div>
+  <div>
+    <div>
+      <p data-i18n="s2.p1">Tokenization of real-world assets — debt, equity, real estate, funds — as institutional infrastructure rather than experiment. We work upstream of the smart contract: issuer architecture, custody design, investor protection, regulator interface and the cross-jurisdictional posture that allows the structure to survive the next regulatory cycle.</p>
+      <p data-i18n="s2.p2">AZLYC structured the first debt-tokenization pilot to complete the Spanish CNMV regulatory sandbox (2021–22). Active mandates in Europe and the Caucasus under MiCA, the FCA Digital Securities Sandbox and National Bank of Georgia frameworks.</p>
+      <p data-i18n="s2.p3">AZLYC also operates Blockchain Maturity Model (BMM) assessments as a BMM-authorized Business Associate of the Government Blockchain Association (GBA). Lead assessor: certified BMM Assessor and Regional Director for Europe, GBA; Co-Chair of the UK &amp; European Digital Asset Task Force of the Digital Asset Regulatory Authority (DARA).</p>
+      <div>
+        <span class="tag tag--green" data-i18n="s2.t1">RWA tokenization</span>
+        <span class="tag" data-i18n="s2.t2">MiCA &amp; CASP</span>
+        <span class="tag" data-i18n="s2.t3">CNMV Sandbox</span>
+        <span class="tag" data-i18n="s2.t4">FCA DSS</span>
+        <span class="tag" data-i18n="s2.t5">National Bank of Georgia</span>
+        <span class="tag" data-i18n="s2.t6">BMM Assessor (GBA)</span>
+        <span class="tag" data-i18n="s2.t7">DARA Task Force</span>
+        <span class="tag" data-i18n="s2.t8">Custody design</span>
+        <span class="tag" data-i18n="s2.t9">Issuer architecture</span>
+      </div>
+    </div>
+    <div class="frame bmm">
+      <div class="mast mast--green" data-i18n="bmm.mast">— Blockchain Maturity Model</div>
+      <h3 class="ser" data-i18n="bmm.h">A bounded first engagement.</h3>
+      <p data-i18n="bmm.p">A structured assessment of a digital-asset or AI initiative against the GBA's Blockchain Maturity Model — governance, security, compliance, operations. Defined scope, written report, a clear next step. Often the first engagement; sometimes the only one needed.</p>
+      <ol class="next">
+        <li><span class="mast">01</span><span data-i18n="bmm.1">Scoping call and document request</span></li>
+        <li><span class="mast">02</span><span data-i18n="bmm.2">Assessment against the BMM standard</span></li>
+        <li><span class="mast">03</span><span data-i18n="bmm.3">Written report and recommended path</span></li>
+      </ol>
+      <a href="mailto:bmm@azlyc.com?subject=BMM%20assessment" class="btn btn--ghost" data-i18n="bmm.cta">Request an assessment →</a>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div class="ser">2017</div>
+      <div class="mast" data-i18n="st.1">Established</div>
+    </div>
+    <div>
+      <div class="ser">4</div>
+      <div class="mast" data-i18n="st.2">Jurisdictions · ES · IT · GE · CA</div>
+    </div>
+    <div>
+      <div class="ser">CNMV</div>
+      <div class="mast" data-i18n="st.3">First debt-tokenization sandbox</div>
+    </div>
+    <div>
+      <div class="ser">GBA</div>
+      <div class="mast" data-i18n="st.4">BMM Assessor · Regional Director, Europe</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC-4 · ENGAGEMENTS -->
+<section id="sec-4">
+  <div>
+    <div>
+      <div class="mast mast--green" data-i18n="s4.mast">03 · Practice</div>
+      <h2 class="ser" data-i18n="s4.h2">Selected <span class="ital">engagements.</span></h2>
+    </div>
+    <div>
+      <p data-i18n="s4.p">Three representative engagements — anonymized, paraphrased, condensed. References available on request, under NDA. AZLYC does not publish client lists, logos or case studies.</p>
+    </div>
+  </div>
+  <div>
+    <article class="frame lift">
+      <div>
+        <div class="ser">01</div>
+        <div class="mast">2025–26</div>
+      </div>
+      <div>
+        <div class="mast mast--green" data-i18n="e1.mast">— Georgia · Digital assets · Embedded</div>
+        <h3 class="ser" data-i18n="e1.h">Institutional digital-asset platform</h3>
+        <p data-i18n="e1.p">Digital-asset structuring and licensing for an institutional platform under the National Bank of Georgia framework — governance, custody architecture, regulatory interface and cross-border operating posture.</p>
+        <div>
+          <span class="tag" data-i18n="e1.t1">Digital assets</span>
+          <span class="tag" data-i18n="e1.t2">National Bank of Georgia</span>
+          <span class="tag" data-i18n="e1.t3">Cross-border</span>
+        </div>
+      </div>
+      <div>
+        <a href="#sec-6" class="btn btn--ghost" data-i18n="enq.1">Enquire →</a>
+        <div class="placeholder-warm"></div>
+      </div>
+    </article>
+
+    <article class="frame lift">
+      <div>
+        <div class="ser">02</div>
+        <div class="mast">2022–23</div>
+      </div>
+      <div>
+        <div class="mast mast--green" data-i18n="e2.mast">— Italy · ESG strategy · Strategic advisory</div>
+        <h3 class="ser" data-i18n="e2.h">CSRD transition for a pharmaceutical group</h3>
+        <p data-i18n="e2.p">Sustainability strategy and ESG governance architecture for an Italian pharmaceutical group navigating the transition from voluntary reporting to mandatory CSRD-aligned obligations.</p>
+        <div>
+          <span class="tag" data-i18n="e2.t1">CSRD</span>
+          <span class="tag" data-i18n="e2.t2">ESG governance</span>
+          <span class="tag" data-i18n="e2.t3">Pharma</span>
+        </div>
+      </div>
+      <div>
+        <a href="#sec-6" class="btn btn--ghost" data-i18n="enq.2">Enquire →</a>
+        <div class="placeholder-cool"></div>
+      </div>
+    </article>
+
+    <article class="frame lift">
+      <div>
+        <div class="ser">03</div>
+        <div class="mast">2019–22</div>
+      </div>
+      <div>
+        <div class="mast mast--green" data-i18n="e3.mast">— Central America · Cultural transformation</div>
+        <h3 class="ser" data-i18n="e3.h">Ethos &amp; governance redesign for a private university</h3>
+        <p data-i18n="e3.p">Ethos and governance redesign for a private university in Central America — leadership alignment, values architecture and the cultural work that turned a regulatory transition into durable institutional change.</p>
+        <div>
+          <span class="tag" data-i18n="e3.t1">Cultural transformation</span>
+          <span class="tag" data-i18n="e3.t2">Higher education</span>
+          <span class="tag" data-i18n="e3.t3">Values architecture</span>
+        </div>
+      </div>
+      <div>
+        <a href="#sec-6" class="btn btn--ghost" data-i18n="enq.3">Enquire →</a>
+        <div class="placeholder-warm"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SEC-6 · CONTACT -->
+<section id="sec-6">
+  <div class="mast mast--green" data-i18n="s6.mast">— Contact</div>
+  <h2 class="ser" data-i18n="s6.h2">Begin a <span class="ital">conversation.</span></h2>
+  <p data-i18n="s6.p">Selective and discreet. A senior advisor will reply within two working days.</p>
+  <div>
+    <div>
+      <div class="mast" data-i18n="s6.l1">Direct</div>
+      <a href="mailto:bmm@azlyc.com" class="ser ital">bmm@azlyc.com</a>
+      <div class="mast" data-i18n="s6.l2">Hours</div>
+      <div class="ser" data-i18n="s6.v2">Mon — Fri, by appointment</div>
+      <div class="mast" data-i18n="s6.l3">Entity</div>
+      <div class="ser" data-i18n="s6.v3">AZLYC BV · Netherlands · Est. 2017</div>
+      <div class="mast" data-i18n="s6.l4">Network</div>
+      <div class="ser"><a href="https://aznar.legal" target="_blank" rel="noopener">aznar.legal</a> <span class="dim" data-i18n="s6.v4a">· legal &amp; compliance practice</span></div>
+      <div class="ser"><a href="https://enriqueaznar.com" target="_blank" rel="noopener">enriqueaznar.com</a> <span class="dim" data-i18n="s6.v4b">· founder</span></div>
+
+      <div class="mast" data-i18n="s6.l5">What happens next</div>
+      <ol class="next">
+        <li><span class="mast">01</span><span data-i18n="nx.1">A reply within two working days.</span></li>
+        <li><span class="mast">02</span><span data-i18n="nx.2">A 30-minute call to hear the problem as it stands.</span></li>
+        <li><span class="mast">03</span><span data-i18n="nx.3">A short written note: whether this is work for the studio, how it would be structured — and if not, who you should call instead.</span></li>
+      </ol>
+    </div>
+    <div>
+      <form action="https://formspree.io/f/mdawdroa" method="POST">
+        <div>
+          <span class="lbl" data-i18n="f.name">Name</span>
+          <input name="name" type="text" required />
+        </div>
+        <div>
+          <span class="lbl" data-i18n="f.email">Email</span>
+          <input name="email" type="email" required />
+        </div>
+        <div>
+          <span class="lbl" data-i18n="f.msg">Message</span>
+          <textarea name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--green" data-i18n="f.send">Send →</button>
+      </form>
+      <div class="alt frame">
+        <div class="mast" data-i18n="alt.mast">— Not ready to write?</div>
+        <p data-i18n="alt.p">Start with a Blockchain Maturity Model (BMM) assessment: a structured, bounded first engagement that tells you where your digital-asset or AI initiative stands against an institutional standard — before any broader mandate.</p>
+        <a href="mailto:bmm@azlyc.com?subject=BMM%20assessment" class="btn btn--ghost" data-i18n="alt.cta">Request a BMM assessment →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <img src="data:image/jpeg;base64,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" alt="AZLYC" class="logo logo--footer" />
+    <div class="mast">
+      <div data-i18n="ft.tag">Strategic governance and systems transformation studio</div>
+      <div data-i18n="ft.ent">AZLYC BV · Netherlands · Est. 2017</div>
+    </div>
+  </div>
+  <div>
+    <div class="mast" data-i18n="ft.copy">© 2026 AZLYC BV — Studio at the intersection.</div>
+    <div>
+      <a href="#sec-0" class="mast" data-i18n="ft.l1">Approach</a>
+      <a href="#sec-1" class="mast" data-i18n="ft.l2">Domains</a>
+      <a href="#sec-4" class="mast" data-i18n="ft.l3">Practice</a>
+      <a href="https://aznar.legal" target="_blank" rel="noopener" class="mast">aznar.legal</a>
+      <a href="https://enriqueaznar.com" target="_blank" rel="noopener" class="mast">enriqueaznar.com</a>
+      <a href="mailto:bmm@azlyc.com" class="mast">bmm@azlyc.com</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+const ES = {
+  'meta.title':'AZLYC — Estudio de gobernanza estratégica y transformación de sistemas',
+  'meta.desc':'AZLYC es un estudio de gobernanza estratégica y transformación de sistemas: gobierno corporativo, activos digitales y tokenización, gobernanza de IA y sostenibilidad como infraestructura institucional.',
+  'nav.approach':'Enfoque','nav.domains':'Ámbitos','nav.practice':'Práctica','nav.contact':'Contacto','nav.cta':'Iniciar una conversación →',
+  'hero.mast':'Un estudio de gobernanza estratégica · Est. 2017',
+  'hero.h1':'El sistema operativo<br/>de las <span class="ital">instituciones</span><br/>está <span class="ital-orange">cambiando.</span>',
+  'hero.note':'— Nota del estudio',
+  'hero.lede':'AZLYC es un estudio de gobernanza estratégica y transformación de sistemas. Trabajamos donde la pregunta que afronta un consejo, un fundador o una institución aún no está ordenada por disciplina — y donde la respuesta tendrá consecuencias institucionales.',
+  'hero.cta1':'Explorar ámbitos →','hero.cta2':'Iniciar una conversación',
+  'hero.fields':'— Tres campos de práctica',
+  'd1.title':'Gobernanza y Arquitectura Institucional','d2.title':'Infraestructuras Digitales, Tokenizadas y de IA','d3.title':'Transformación, Cultura y Sostenibilidad',
+  'hero.proof':'— Trayectoria verificable',
+  'proof.1':'Primer piloto de tokenización de deuda que completó el sandbox regulatorio español, 2021–22',
+  'proof.2':'Business Associate autorizado BMM · Director Regional para Europa',
+  'proof.3':'Co-Chair, UK &amp; European Digital Asset Task Force',
+  'proof.4l':'Mandatos','proof.4':'España · Italia · Georgia · Centroamérica',
+  'mq.1':'Las instituciones mejor gobernadas hacen el mundo más navegable.','mq.2':'Tokenización · RWA','mq.3':'Gobernanza de IA · AI Act','mq.4':'MiCA y CASP','mq.5':'CSRD / ESRS','mq.6':'Sandboxes CNMV y FCA','mq.7':'Consejos e instituciones',
+  'mq.1b':'Las instituciones mejor gobernadas hacen el mundo más navegable.','mq.2b':'Tokenización · RWA','mq.3b':'Gobernanza de IA · AI Act','mq.4b':'MiCA y CASP','mq.5b':'CSRD / ESRS','mq.6b':'Sandboxes CNMV y FCA','mq.7b':'Consejos e instituciones',
+  's0.mast':'01 · Enfoque',
+  's0.h2':'Cuando las categorías existentes ya no <span class="ital">responden.</span>',
+  's0.p1':'Los activos digitales están redibujando cómo se posee y se gobierna el valor. La inteligencia artificial se adopta más rápido de lo que se escriben sus normas. La sostenibilidad ha pasado de ejercicio de reporte a restricción estratégica. La regulación llega en oleadas — MiCA, el AI Act, CSRD, DLT — y cada una redefine qué significa cumplir antes de que la anterior haya sido asimilada.',
+  's0.p2':'Bajo todo esto sobrevive una pregunta más antigua: para qué sirve una institución y qué hace falta para construir una que perdure. AZLYC nació alrededor de esa pregunta. El trabajo se sitúa antes que el asesoramiento legal o la consultoría técnica — en cómo un consejo, un fundador o una institución sostiene juntas su estructura, su tecnología y su cultura, con integridad, de un modo que sobreviva al liderazgo que lo inició.',
+  's0.c1h':'La pregunta','s0.c1p':'Aún no ordenada por disciplina. Una decisión de tokenización es también una decisión de gobernanza; un despliegue de IA es también una cuestión de responsabilidad del consejo.',
+  's0.c2h':'El trabajo','s0.c2p':'Arquitectura antes que implementación: derechos de decisión, postura regulatoria, custodia, cultura — diseñados como un solo sistema y entregados listos para operar.',
+  's0.c3h':'La convicción','s0.c3p':'Las instituciones mejor gobernadas hacen el mundo más navegable. Esa es la convicción desde la que opera el estudio.',
+  's1.mast':'02 · Ámbitos','s1.h2':'Tres campos de <span class="ital">práctica.</span>','s1.intro':'Configurados por encargo, organizados como sistema.',
+  'd1.title2':'Gobernanza y Arquitectura Institucional',
+  'd1.p':'Diseñar cómo se toman las decisiones antes de tomarlas. Arquitectura del consejo, derechos de decisión y marcos de rendición de cuentas para organizaciones cuya estructura ya no responde a su entorno — incluido el consejo sénior en situaciones multilaterales y multijurisdiccionales que no encajan en el manual.',
+  'd1.t1':'Arquitectura del consejo','d1.t2':'Derechos de decisión','d1.t3':'Rendición de cuentas','d1.t4':'Asesoría estratégica','d1.t5':'Entornos complejos',
+  'eg.label':'Mandato típico','eg.label2':'Mandato típico','eg.label3':'Mandato típico',
+  'd1.eg':'Rediseño de derechos de decisión y supervisión del consejo para una institución que entra en un mercado regulado.',
+  'd2.title2':'Infraestructuras Digitales, Tokenizadas y de IA',
+  'd2.p':'Capas de coordinación para activos y tecnologías cuyas reglas aún se están escribiendo. Tokenización y estructuración de activos digitales bajo MiCA, CNMV y FCA; gobernanza de IA y preparación para el AI Act en instituciones que adoptan IA en entornos regulados; evaluaciones Blockchain Maturity Model.',
+  'd2.t1':'Tokenización · RWA','d2.t2':'MiCA y CASP','d2.t3':'Gobernanza de DAOs','d2.t4':'Gobernanza de IA','d2.t5':'AI Act','d2.t6':'Evaluación BMM',
+  'd2.eg':'Arquitectura del emisor, diseño de custodia e interfaz con el regulador para una emisión de deuda tokenizada — o un marco de gobernanza de IA para una institución regulada.',
+  'd3.title2':'Transformación, Cultura y Sostenibilidad',
+  'd3.p':'Cambio que sobrevive al liderazgo que lo inició. Transición cultural, alineamiento del liderazgo, sistemas operativos basados en valores y sostenibilidad integrada como infraestructura institucional — en la gobernanza, los derechos de decisión y los modelos operativos, no en el ciclo de reporte.',
+  'd3.t1':'Transición cultural','d3.t2':'Alineamiento del liderazgo','d3.t3':'Arquitectura de valores','d3.t4':'CSRD / ESRS','d3.t5':'Gobernanza ESG',
+  'd3.eg':'Estrategia de sostenibilidad y gobernanza ESG para un grupo que pasa del reporte voluntario al obligatorio.',
+  'fmt.label':'Formatos de entrega','fmt.list':'Asesoría estratégica · Mandatos integrados · Evaluaciones BMM · Sesiones cerradas para consejos y organismos públicos',
+  's2.mast':'— Tokenización y Madurez Blockchain','s2.h2':'Activos del mundo real, <span class="ital">infraestructura institucional.</span>',
+  's2.p1':'Tokenización de activos del mundo real — deuda, acciones, inmuebles, fondos — como infraestructura institucional, no como experimento. Trabajamos antes del contrato inteligente: arquitectura del emisor, diseño de custodia, protección del inversor, interfaz con el regulador y la postura jurisdiccional que permite que la estructura sobreviva al próximo ciclo regulatorio.',
+  's2.p2':'AZLYC estructuró el primer piloto de tokenización de deuda que completó el sandbox regulatorio de la CNMV (2021–22). Mandatos activos en Europa y el Cáucaso bajo MiCA, el Digital Securities Sandbox de la FCA y los marcos del Banco Nacional de Georgia.',
+  's2.p3':'AZLYC también realiza evaluaciones Blockchain Maturity Model (BMM) como Business Associate autorizado BMM de la Government Blockchain Association (GBA). Evaluador principal: BMM Assessor certificado y Director Regional para Europa de la GBA; Co-Chair del UK &amp; European Digital Asset Task Force de la Digital Asset Regulatory Authority (DARA).',
+  'bmm.mast':'— Blockchain Maturity Model','bmm.h':'Un primer encargo acotado.','bmm.p':'Una evaluación estructurada de una iniciativa de activos digitales o de IA frente al Blockchain Maturity Model de la GBA — gobernanza, seguridad, cumplimiento, operaciones. Alcance definido, informe escrito y un siguiente paso claro. A menudo es el primer encargo; a veces, el único necesario.','bmm.1':'Llamada de alcance y petición de documentación','bmm.2':'Evaluación frente al estándar BMM','bmm.3':'Informe escrito y camino recomendado','bmm.cta':'Solicitar una evaluación →',
+  's2.t1':'Tokenización RWA','s2.t2':'MiCA y CASP','s2.t3':'Sandbox CNMV','s2.t4':'FCA DSS','s2.t5':'Banco Nacional de Georgia','s2.t6':'BMM Assessor (GBA)','s2.t7':'Task Force DARA','s2.t8':'Diseño de custodia','s2.t9':'Arquitectura del emisor',
+  'st.1':'Establecido','st.2':'Jurisdicciones · ES · IT · GE · CA','st.3':'Primer sandbox de tokenización de deuda','st.4':'BMM Assessor · Director Regional, Europa',
+  's4.mast':'03 · Práctica','s4.h2':'Mandatos <span class="ital">seleccionados.</span>',
+  's4.p':'Tres mandatos representativos — anonimizados, parafraseados, condensados. Referencias disponibles bajo solicitud y NDA. AZLYC no publica listas de clientes, logotipos ni estudios de caso.',
+  'e1.mast':'— Georgia · Activos digitales · Integrado','e1.h':'Plataforma institucional de activos digitales',
+  'e1.p':'Estructuración y licenciamiento de activos digitales para una plataforma institucional bajo el marco del Banco Nacional de Georgia — gobernanza, arquitectura de custodia, interfaz regulatoria y postura operativa transfronteriza.',
+  
+  
+  'e1.t1':'Activos digitales','e1.t2':'Banco Nacional de Georgia','e1.t3':'Transfronterizo',
+  'e2.mast':'— Italia · Estrategia ESG · Asesoría estratégica','e2.h':'Transición CSRD para un grupo farmacéutico',
+  'e2.p':'Estrategia de sostenibilidad y arquitectura de gobernanza ESG para un grupo farmacéutico italiano en la transición del reporte voluntario a las obligaciones alineadas con CSRD.',
+  
+  'e2.t1':'CSRD','e2.t2':'Gobernanza ESG','e2.t3':'Farmacéutica',
+  'e3.mast':'— Centroamérica · Transformación cultural','e3.h':'Rediseño de ethos y gobernanza en una universidad privada',
+  'e3.p':'Rediseño de ethos y gobernanza para una universidad privada en Centroamérica — alineamiento del liderazgo, arquitectura de valores y el trabajo cultural que convirtió una transición regulatoria en cambio institucional duradero.',
+  
+  'e3.t1':'Transformación cultural','e3.t2':'Educación superior','e3.t3':'Arquitectura de valores',
+  'enq.1':'Consultar →','enq.2':'Consultar →','enq.3':'Consultar →',
+  's6.mast':'— Contacto','s6.h2':'Iniciemos una <span class="ital">conversación.</span>','s6.p':'Selectivo y discreto. Un asesor sénior responderá en dos días hábiles.',
+  's6.l1':'Directo','s6.l2':'Horario','s6.v2':'Lun — Vie, con cita previa','s6.l3':'Entidad','s6.v3':'AZLYC BV · Países Bajos · Est. 2017',
+  's6.l4':'Red','s6.v4a':'· práctica legal y de compliance','s6.v4b':'· fundador',
+  's6.l5':'Qué ocurre después',
+  'nx.1':'Una respuesta en dos días hábiles.','nx.2':'Una llamada de 30 minutos para escuchar el problema tal como está.','nx.3':'Una nota breve por escrito: si es trabajo para el estudio, cómo se estructuraría — y si no, a quién deberías llamar.',
+  'f.name':'Nombre','f.email':'Correo electrónico','f.msg':'Mensaje','f.send':'Enviar →',
+  'alt.mast':'— ¿Aún no es momento de escribir?',
+  'alt.p':'Empieza por una evaluación Blockchain Maturity Model (BMM): un primer encargo estructurado y acotado que sitúa tu iniciativa de activos digitales o de IA frente a un estándar institucional — antes de cualquier mandato más amplio.',
+  'alt.cta':'Solicitar una evaluación BMM →',
+  'ft.tag':'Estudio de gobernanza estratégica y transformación de sistemas','ft.ent':'AZLYC BV · Países Bajos · Est. 2017',
+  'ft.copy':'© 2026 AZLYC BV — Estudio en la intersección.','ft.l1':'Enfoque','ft.l2':'Ámbitos','ft.l3':'Práctica'
+};
+const EN = {};
+const nodes = Array.from(document.querySelectorAll('[data-i18n]'));
+nodes.forEach(el => { EN[el.getAttribute('data-i18n')] = el.innerHTML; });
+EN['meta.title'] = document.title;
+const metaDesc = document.querySelector('meta[name="description"]');
+EN['meta.desc'] = metaDesc ? metaDesc.content : '';
+let cur = 'en';
+function applyLang(lang){
+  const D = lang === 'es' ? ES : EN;
+  nodes.forEach(el => { const k = el.getAttribute('data-i18n'); if (D[k] !== undefined) el.innerHTML = D[k]; });
+  document.documentElement.lang = lang;
+  document.title = D['meta.title'];
+  if (metaDesc) metaDesc.content = D['meta.desc'];
+  document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+  cur = lang;
+  try { localStorage.setItem('azlyc-lang', lang); } catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(btn => btn.addEventListener('click', () => { if (btn.dataset.lang !== cur) applyLang(btn.dataset.lang); }));
+let saved = null; try { saved = localStorage.getItem('azlyc-lang'); } catch(e){}
+if (saved === 'es') applyLang('es');
+window.applyLang = applyLang;
+})();
+</script>
+</body>
+</html>
