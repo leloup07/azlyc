@@ -244,25 +244,55 @@ body { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; -webk
 .dirC #sec-2 > div:first-child h2 { margin-bottom: 24px; max-width: 18ch; }
 
 /* Section sec-4 (engagements) */
-.dirC #sec-4 > div:last-child {
+.dirC :is(#sec-4, #sec-5) > div:last-child {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
 }
-.dirC #sec-4 > div:last-child article {
+.dirC :is(#sec-4, #sec-5) > div:last-child article {
   padding: 28px; display: flex; flex-direction: column; gap: 18px; border-radius: 6px;
 }
-.dirC #sec-4 > div:last-child article > div:nth-child(1) { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
-.dirC #sec-4 > div:last-child article > div:nth-child(1) > .ser { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--acc); }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) { flex-grow: 1; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) > .mast { display: block; margin-bottom: 10px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) h3 { font-size: 22px; line-height: 1.2; margin-bottom: 12px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) p { font-size: 15px; line-height: 1.65; color: var(--ink-2); margin-bottom: 16px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(2) > div:last-child { display: flex; flex-wrap: wrap; gap: 6px; }
-.dirC #sec-4 > div:last-child article > div:nth-child(3) {
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(1) { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(1) > .ser { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--acc); }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(2) { flex-grow: 1; }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(2) > .mast { display: block; margin-bottom: 10px; }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(2) h3 { font-size: 22px; line-height: 1.2; margin-bottom: 12px; }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(2) p { font-size: 15px; line-height: 1.65; color: var(--ink-2); margin-bottom: 16px; }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(2) > div:last-child { display: flex; flex-wrap: wrap; gap: 6px; }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(3) {
   display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: auto;
 }
-.dirC #sec-4 > div:last-child article > div:nth-child(3) > .placeholder-warm,
-.dirC #sec-4 > div:last-child article > div:nth-child(3) > .placeholder-cool { width: 72px; height: 44px; border-radius: 3px; }
-@media (max-width: 1100px) { .dirC #sec-4 > div:last-child { grid-template-columns: 1fr; } }
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(3) > .placeholder-warm,
+.dirC :is(#sec-4, #sec-5) > div:last-child article > div:nth-child(3) > .placeholder-cool { width: 72px; height: 44px; border-radius: 3px; }
+@media (max-width: 1100px) { .dirC :is(#sec-4, #sec-5) > div:last-child { grid-template-columns: 1fr; } }
+
+.dirC #sec-5 > div:last-child { grid-template-columns: repeat(2, 1fr); }
+
+.founder { display: flex; align-items: center; gap: 16px; margin: 0 0 28px; }
+.founder img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 2px solid var(--rule); }
+.founder figcaption { display: flex; flex-direction: column; gap: 4px; }
+.founder figcaption .ser { font-size: 20px; }
+.founder--sm { margin: 18px 0 22px; gap: 12px; }
+.founder--sm img { width: 56px; height: 56px; }
+.founder--sm figcaption .ser { font-size: 16px; }
+.eleve-photo { display: block; width: 200px; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 20px; filter: grayscale(1); }
+@media (max-width: 700px) { .eleve-photo { width: 100%; height: 260px; } }
+
+.contact-photo { margin: 28px 0 36px; }
+.contact-photo img { display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 6px; }
+.contact-photo figcaption { margin-top: 10px; }
+.card-photo { display: block; width: 100%; height: 170px; object-fit: cover; border-radius: 4px; margin-bottom: 18px; }
+@media (max-width: 700px) { .contact-photo img { height: 180px; } }
+/* Fotos de catálogo: Unsplash License · Ámsterdam, Gaurav Jain; sala, Pavel Gromov */
+
+.hero-photo { margin: 8px 0 40px; }
+.hero-photo img { display: block; width: 100%; height: 320px; object-fit: cover; border-radius: 6px; filter: saturate(0.85); }
+@media (max-width: 700px) { .hero-photo img { height: 200px; } }
+.btn-eleve { border-color: var(--acc) !important; color: var(--acc) !important; margin-right: 8px; }
+@media (max-width: 900px) { .btn-eleve { display: none; } }
+/* Foto de catálogo: sala de consejo, Benjamin Child (Unsplash License) */
+
+.founder-link { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.founder-link:hover { color: var(--acc); }
+#sec-5 p a { color: var(--acc); }
 
 /* Section sec-6 (contact) */
 .dirC #sec-6 { border-bottom: 0; }
@@ -338,10 +368,12 @@ body { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; -webk
     <a href="#sec-0" data-i18n="nav.approach">Approach</a>
     <a href="#sec-1" data-i18n="nav.domains">Domains</a>
     <a href="#sec-4" data-i18n="nav.practice">Practice</a>
+    <a href="#sec-5" data-i18n="nav.edu">Advisory</a>
     <a href="#sec-6" data-i18n="nav.contact">Contact</a>
   </nav>
   <div>
     <div class="lang"><button class="on" data-lang="en">EN</button><button data-lang="es">ES</button></div>
+    <a href="https://eleve.azlyc.com/en/" data-eleve="" target="_blank" rel="noopener" class="btn btn--ghost btn-eleve" data-i18n="nav.eleve">Training · Eleve ↗</a>
     <a href="#sec-6" class="btn" data-i18n="nav.cta">Begin a conversation →</a>
   </div>
 </header>
@@ -354,10 +386,15 @@ body { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; -webk
   <div>
     <h1 data-i18n="hero.h1">The operating system<br/>of <span class="ital">institutions</span><br/>is <span class="ital-orange">changing.</span></h1>
   </div>
+  <figure class="hero-photo"><img src="images/corporativo.webp" alt="Boardroom with a long table and chairs" width="1600" height="520"></figure>
   <div>
     <div>
       <div class="mast" data-i18n="hero.note">— A note from the firm</div>
       <p data-i18n="hero.lede">AZLYC is a strategic governance and systems transformation studio. We work where the question facing a board, a founder or an institution is not yet sorted by discipline — and where the answer will have institutional consequences.</p>
+      <figure class="founder founder--sm">
+        <img src="images/enrique-aznar.webp" alt="Enrique Aznar" width="56" height="56">
+        <figcaption><a class="ser founder-link" href="https://enriqueaznar.com" target="_blank" rel="noopener">Enrique Aznar ↗</a><span class="mast" data-i18n="hero.founder">Founder</span></figcaption>
+      </figure>
       <div>
         <a href="#sec-1" class="btn btn--green" data-i18n="hero.cta1">Explore domains →</a>
         <a href="#sec-6" class="btn btn--ghost" data-i18n="hero.cta2">Begin a conversation</a>
@@ -636,13 +673,79 @@ body { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; -webk
   </div>
 </section>
 
+<!-- SEC-5 · EDUCATION (Eleve by Azlyc) -->
+<section id="sec-5">
+  <div>
+    <div>
+      <div class="mast mast--green" data-i18n="s5.mast">04 · Digital assets</div>
+      <h2 class="ser" data-i18n="s5.h2">Training <span class="ital">and advisory.</span></h2>
+    </div>
+    <div>
+      <img src="images/eleve-clase.webp" alt="Enrique Aznar teaching a session" class="eleve-photo" width="240" height="300" loading="lazy" data-i18n-alt>
+      <p data-i18n="s5.p">Two separate services. <a href="https://eleve.azlyc.com/en/" data-eleve="" target="_blank" rel="noopener">Eleve Education</a>, AZLYC’s training initiative (access for institutions with a password), teaches professionals, boards and supervisors. AZLYC itself provides regulatory advisory, with <a href="https://aznar.legal" target="_blank" rel="noopener">Aznar Legal &amp; Compliance</a> and partners.</p>
+    </div>
+  </div>
+  <div>
+    <article class="frame lift">
+      <div>
+        <div class="ser">E</div>
+        <div class="mast">ELEVE</div>
+      </div>
+      <div>
+        <div class="mast mast--green" data-i18n="ed.mast">— Training · Eleve by Azlyc</div>
+        <h3 class="ser" data-i18n="ed.h">Governance first. Technology second.</h3>
+        <p data-i18n="ed.p">Six tracks built on the ELEVE Method: online courses from The Blockchain Academy and tailored courses in Spanish, adapted to the legal framework of each country.</p>
+        <div>
+          <span class="tag" data-i18n="ed.t1">Foundations</span>
+          <span class="tag" data-i18n="ed.t2">Lawyers</span>
+          <span class="tag" data-i18n="ed.t3">Accountants &amp; auditors</span>
+          <span class="tag" data-i18n="ed.t4">Banking &amp; fintech</span>
+          <span class="tag" data-i18n="ed.t5">Boards</span>
+          <span class="tag" data-i18n="ed.t6">Regulators</span>
+        </div>
+      </div>
+      <div>
+        <a href="https://eleve.azlyc.com/en/" data-eleve="" target="_blank" rel="noopener" class="btn btn--green" data-i18n="ed.cta">Enter Eleve →</a>
+        <span class="mast" data-i18n="ed.pw">Access for institutions · password required</span>
+      </div>
+    </article>
+
+    <article class="frame lift">
+      <div>
+        <div class="ser">A</div>
+        <div class="mast">AZLYC</div>
+      </div>
+      <div>
+        <img src="images/consultoria.webp" alt="Boardroom overlooking a city at sunset" class="card-photo" width="900" height="560" loading="lazy">
+        <div class="mast mast--green" data-i18n="ad.mast">— Regulatory advisory · AZLYC</div>
+        <h3 class="ser" data-i18n="ad.h">From licensing to regulatory frameworks.</h3>
+        <p data-i18n="ad.p">For governments, supervisors and companies: review of the current framework, drafting support, sandbox design, licensing of virtual asset service providers and AML/CFT, custody and governance policies. With <a href="https://aznar.legal" target="_blank" rel="noopener">Aznar Legal &amp; Compliance</a>, partners and a local law firm in each country.</p>
+        <div>
+          <span class="tag" data-i18n="ad.t1">Public sector</span>
+          <span class="tag" data-i18n="ad.t2">VASP licensing</span>
+          <span class="tag" data-i18n="ad.t3">AML/CFT</span>
+          <span class="tag" data-i18n="ad.t4">Sandboxes</span>
+        </div>
+      </div>
+      <div>
+        <a href="#sec-6" class="btn btn--green" data-i18n="ad.cta">Begin a conversation →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
 <!-- SEC-6 · CONTACT -->
 <section id="sec-6">
   <div class="mast mast--green" data-i18n="s6.mast">— Contact</div>
   <h2 class="ser" data-i18n="s6.h2">Begin a <span class="ital">conversation.</span></h2>
   <p data-i18n="s6.p">Selective and discreet. A senior advisor will reply within two working days.</p>
+  <figure class="contact-photo"><img src="images/amsterdam.webp" alt="Canal bridge in Amsterdam" width="1400" height="560" loading="lazy"><figcaption class="mast">Amsterdam</figcaption></figure>
   <div>
     <div>
+      <figure class="founder">
+        <img src="images/enrique-aznar.webp" alt="Enrique Aznar" width="88" height="88" loading="lazy">
+        <figcaption><a class="ser founder-link" href="https://enriqueaznar.com" target="_blank" rel="noopener">Enrique Aznar ↗</a><span class="mast" data-i18n="s6.founder">Founder · will read your message</span></figcaption>
+      </figure>
       <div class="mast" data-i18n="s6.l1">Direct</div>
       <a href="mailto:bmm@azlyc.com" class="ser ital">bmm@azlyc.com</a>
       <div class="mast" data-i18n="s6.l2">Hours</div>
@@ -651,6 +754,7 @@ body { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; -webk
       <div class="ser" data-i18n="s6.v3">AZLYC BV · Netherlands · Est. 2017</div>
       <div class="mast" data-i18n="s6.l4">Network</div>
       <div class="ser"><a href="https://aznar.legal" target="_blank" rel="noopener">aznar.legal</a> <span class="dim" data-i18n="s6.v4a">· legal &amp; compliance practice</span></div>
+      <div class="ser"><a href="https://eleve.azlyc.com" target="_blank" rel="noopener">eleve.azlyc.com</a> <span class="dim" data-i18n="s6.v4c">· digital asset training</span></div>
       <div class="ser"><a href="https://enriqueaznar.com" target="_blank" rel="noopener">enriqueaznar.com</a> <span class="dim" data-i18n="s6.v4b">· founder</span></div>
 
       <div class="mast" data-i18n="s6.l5">What happens next</div>
@@ -701,6 +805,7 @@ body { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; -webk
       <a href="#sec-1" class="mast" data-i18n="ft.l2">Domains</a>
       <a href="#sec-4" class="mast" data-i18n="ft.l3">Practice</a>
       <a href="https://aznar.legal" target="_blank" rel="noopener" class="mast">aznar.legal</a>
+      <a href="https://eleve.azlyc.com" target="_blank" rel="noopener" class="mast">Eleve</a>
       <a href="https://enriqueaznar.com" target="_blank" rel="noopener" class="mast">enriqueaznar.com</a>
       <a href="mailto:bmm@azlyc.com" class="mast">bmm@azlyc.com</a>
     </div>
@@ -714,10 +819,10 @@ body { font-family: 'Space Grotesk', -apple-system, system-ui, sans-serif; -webk
 const ES = {
   'meta.title':'AZLYC — Estudio de gobernanza estratégica y transformación de sistemas',
   'meta.desc':'AZLYC es un estudio de gobernanza estratégica y transformación de sistemas: gobierno corporativo, activos digitales y tokenización, gobernanza de IA y sostenibilidad como infraestructura institucional.',
-  'nav.approach':'Enfoque','nav.domains':'Ámbitos','nav.practice':'Práctica','nav.contact':'Contacto','nav.cta':'Iniciar una conversación →',
+  'nav.approach':'Enfoque','nav.domains':'Ámbitos','nav.practice':'Práctica','nav.edu':'Consultoría','nav.eleve':'Formación · Eleve ↗','ed.pw':'Acceso para instituciones · con contraseña','nav.contact':'Contacto','nav.cta':'Iniciar una conversación →',
   'hero.mast':'Un estudio de gobernanza estratégica · Est. 2017',
   'hero.h1':'El sistema operativo<br/>de las <span class="ital">organizaciones</span><br/>está <span class="ital-orange">cambiando.</span>',
-  'hero.note':'— Nota del estudio',
+  'hero.note':'— Nota del estudio','hero.founder':'Fundador',
   'hero.lede':'AZLYC es un estudio de gobernanza estratégica y transformación de sistemas. Trabajamos donde la pregunta que afronta un consejo, un fundador o una institución aún no está ordenada por disciplina — y donde la respuesta tendrá consecuencias institucionales.',
   'hero.cta1':'Explorar ámbitos →','hero.cta2':'Iniciar una conversación',
   'hero.fields':'— Tres campos de práctica',
@@ -758,6 +863,15 @@ const ES = {
   'bmm.mast':'— Blockchain Maturity Model','bmm.h':'Un primer encargo acotado.','bmm.p':'Una evaluación estructurada de una iniciativa de activos digitales o de IA frente al Blockchain Maturity Model de la GBA — gobernanza, seguridad, cumplimiento, operaciones. Alcance definido, informe escrito y un siguiente paso claro. A menudo es el primer encargo; a veces, el único necesario.','bmm.1':'Llamada de alcance y petición de documentación','bmm.2':'Evaluación frente al estándar BMM','bmm.3':'Informe escrito y camino recomendado','bmm.cta':'Solicitar una evaluación →',
   's2.t1':'Tokenización RWA','s2.t2':'MiCA y CASP','s2.t3':'Sandbox CNMV','s2.t4':'FCA DSS','s2.t5':'Banco Nacional de Georgia','s2.t6':'BMM Assessor (GBA)','s2.t7':'Task Force DARA','s2.t8':'Diseño de custodia','s2.t9':'Arquitectura del emisor',
   'st.1':'Establecido','st.2':'Jurisdicciones · ES · IT · GE · CA','st.3':'Primer sandbox de tokenización de deuda','st.4':'BMM Assessor · Director Regional, Europa',
+  's5.mast':'04 · Activos digitales','s5.h2':'Formación <span class="ital">y consultoría.</span>',
+  's5.p':'Dos servicios distintos. <a href="https://eleve.azlyc.com/" data-eleve="" target="_blank" rel="noopener">Eleve Education</a>, la iniciativa de formación de AZLYC (acceso para instituciones con contraseña), forma a profesionales, consejos y supervisores. AZLYC presta la consultoría regulatoria, con <a href="https://aznar.legal" target="_blank" rel="noopener">Aznar Legal &amp; Compliance</a> y partners.',
+  'ed.mast':'— Formación · Eleve by Azlyc','ed.h':'Primero el gobierno. Después la tecnología.',
+  'ed.p':'Seis itinerarios basados en el Método ELEVE: cursos online de The Blockchain Academy y cursos a medida en español, adaptados al marco jurídico de cada país.',
+  'ad.mast':'— Consultoría regulatoria · AZLYC','ad.h':'De la licencia al marco regulatorio.',
+  'ad.p':'Para gobiernos, supervisores y empresas: diagnóstico del marco vigente, apoyo en la redacción normativa, diseño de sandboxes, autorización de proveedores de servicios de activos virtuales y políticas AML/CFT, de custodia y de gobierno. Con <a href="https://aznar.legal" target="_blank" rel="noopener">Aznar Legal &amp; Compliance</a>, partners y un despacho local en cada país.',
+  'ad.t1':'Sector público','ad.t2':'Licencias PSAV','ad.t3':'AML/CFT','ad.t4':'Sandboxes','ad.cta':'Iniciar una conversación →',
+  'ed.t1':'Fundamentos','ed.t2':'Abogados','ed.t3':'Contadores y auditores','ed.t4':'Banca y fintech','ed.t5':'Consejos','ed.t6':'Reguladores',
+  'ed.cta':'Entrar en Eleve →',
   's4.mast':'03 · Práctica','s4.h2':'Mandatos <span class="ital">seleccionados.</span>',
   's4.p':'Tres mandatos representativos — anonimizados, parafraseados, condensados. Referencias disponibles bajo solicitud y NDA. AZLYC no publica listas de clientes, logotipos ni estudios de caso.',
   'e1.mast':'— Georgia · Activos digitales · Integrado','e1.h':'Plataforma institucional de activos digitales',
@@ -776,7 +890,7 @@ const ES = {
   'enq.1':'Consultar →','enq.2':'Consultar →','enq.3':'Consultar →',
   's6.mast':'— Contacto','s6.h2':'Iniciemos una <span class="ital">conversación.</span>','s6.p':'Selectivo y discreto. Un asesor sénior responderá en dos días hábiles.',
   's6.l1':'Directo','s6.l2':'Horario','s6.v2':'Lun — Vie, con cita previa','s6.l3':'Entidad','s6.v3':'AZLYC BV · Países Bajos · Est. 2017',
-  's6.l4':'Red','s6.v4a':'· práctica legal y de compliance','s6.v4b':'· fundador',
+  's6.l4':'Red','s6.v4a':'· práctica legal y de compliance','s6.v4b':'· fundador','s6.founder':'Fundador · leerá su mensaje','s6.v4c':'· formación en activos digitales',
   's6.l5':'Qué ocurre después',
   'nx.1':'Una respuesta en dos días hábiles.','nx.2':'Una llamada de 30 minutos para escuchar el problema tal como está.','nx.3':'Una nota breve por escrito: si es trabajo para el estudio, cómo se estructuraría — y si no, a quién deberías llamar.',
   'f.name':'Nombre','f.email':'Correo electrónico','f.msg':'Mensaje','f.send':'Enviar →',
@@ -797,6 +911,7 @@ function applyLang(lang){
   const D = lang === 'es' ? ES : EN;
   nodes.forEach(el => { const k = el.getAttribute('data-i18n'); if (D[k] !== undefined) el.innerHTML = D[k]; });
   document.documentElement.lang = lang;
+  document.querySelectorAll('[data-eleve]').forEach(a => { a.href = (lang === 'es' ? 'https://eleve.azlyc.com/' : 'https://eleve.azlyc.com/en/') + a.dataset.eleve; });
   document.title = D['meta.title'];
   if (metaDesc) metaDesc.content = D['meta.desc'];
   document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
